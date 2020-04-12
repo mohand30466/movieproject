@@ -1,14 +1,14 @@
 import { combineReducers } from "redux";  
 
- const ContantData = (state = [], action) => {
+export const ContantData = (state = [], action) => {
   if (action.type === "MOVIE-DATA"){
-     return [...state, ...action.payload];
+     return [...state,...action.payload];
 };
 return state;
 }
-console.log(state);
+// console.log(state);
 
 export default combineReducers({
-   data :ContantData,
+   data:ContantData,
   
 });

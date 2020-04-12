@@ -1,9 +1,14 @@
-import Api from '../Api'
+import Api from '../Api/Api';
+import axios from 'axios'
 
-export const MovieData = ()=>{
-    const response = Api.get(`/movie/${id} `)
+
+
+export default  MovieData = async()=>{
+    
+
     return{
         type: 'MOVIE-DATA',
         payload: response
     }
 }
+
