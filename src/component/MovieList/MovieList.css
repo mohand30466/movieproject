@@ -37,7 +37,7 @@
     font-size: 1.5rem;
     font-family: monospace;
    position: absolute;
-   color: white;
+   color: rgb(235, 221, 221);
    top: 296px;
    background-color:var(--seconderyColor);
    left: 150px;
