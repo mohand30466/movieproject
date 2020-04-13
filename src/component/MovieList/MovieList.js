@@ -14,14 +14,15 @@ class MovieList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="movieContainer">
         {this.state.data.map((movie) => {
           console.log(movie);
           return (
-            <div className="card" key={movie.id}>
-              <div>title:{movie.title}</div>
-              <div>year:{movie.year}</div>
-              <div>rating:{movie.vote_count}</div>
+            <div className="card"style={{backgroundImage: `url(https://image.tmdb.org/t/p/w300/${movie.poster_path})`}} key={movie.id}>
+             
+              <div className='title'>{movie.title}</div>
+              <div className="year">{movie.release_date}</div>
+              <div className='rating'>{movie.vote_average}</div>
             </div>
           );
         })}

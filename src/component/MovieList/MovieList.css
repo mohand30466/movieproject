@@ -1,7 +1,47 @@
+
+.movieContainer{
+    /* display: flex; */
+    min-height: 100vh;
+    position: relative;
+
+}
 .card{
-    width: 13rem;
+    position: relative;
+    width: 12rem;
     height: 20rem;
-    border: solid black 2px;
-    margin-bottom: 2rem;
+    border: solid gray 10px;
+    border-radius: 5%;
+    margin: .5rem;
+    /* background-color: rgb(137, 175, 245); */
+
+}
+.title{
+
+    font-size: 1.5rem;
+    font-family: monospace;
+    text-align: center;
+    background-color:var(--seconderyColor);
+    border-radius: 1px;
+}
+.year{
+    font-size: 1.5rem;
+    font-family: monospace;
+   position: absolute;
+   color: white;
+   top: 296px;
+   background-color:var(--seconderyColor);
+   border-radius: 2px;
+
+}
+.rating{
+    font-size: 1.5rem;
+    font-family: monospace;
+   position: absolute;
+   color: white;
+   top: 296px;
+   background-color:var(--seconderyColor);
+   left: 150px;
+   border-radius: 2px;
+
 
 }

@@ -1,0 +1,14 @@
+.navContainer{
+    text-align: center;
+    height: 3rem;
+    color: var(--textColor);
+    border: red 2px solid;
+}
+ ul{
+    display: flex;
+    list-style-type: none;
+}
+li{
+    margin-right: 5rem;
+    
+}
