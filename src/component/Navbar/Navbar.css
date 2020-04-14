@@ -1,14 +1,23 @@
-.navContainer{
-    text-align: center;
-    height: 3rem;
-    color: var(--textColor);
-    border: red 2px solid;
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  padding-top: 0.7rem;
+  text-align: center;
+  height: 2rem;
+  color: var(--textColor);
+  border: red 2px solid;
+  list-style-type: none;
+  background-color: slategray;
 }
- ul{
-    display: flex;
-    list-style-type: none;
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin-right: 5rem;
+  text-decoration: none;
+  list-style-type: none;
 }
-li{
-    margin-right: 5rem;
-    
+.links {
+  color: #FFFFFF;
+  text-decoration: none;
 }
