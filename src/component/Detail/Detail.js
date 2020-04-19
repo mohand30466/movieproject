@@ -1,34 +1,54 @@
 import React from "react";
-import MovieList from '../MovieList/MovieList'
+import { useParams } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import { fetchMovieWithId } from "../../Api/Api";
+import './Detail.css'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link,
-  BrowserRouter
+  BrowserRouter,
 } from "react-router-dom";
 
+class Detail extends React.Component {
+  state = { post: [], data: [] };
 
-const Detail = (props) => {
-  console.log(props.id);
-  
-  
-  
- 
-  // const post = this.props.match.patams.id;
-  // if (!post){
-  //   return <h>lodding</h>
-  // }
-  
+  async componentDidMount() {
+    const data = await fetchMovieWithId();
 
+    this.setState({ post: data.results });
+  }
 
+  render() {
+    const { id } = this.props.match.params;
+    return (
+      <div className="detailComponent">
+         <div className='backLink'>
+             <Link to="/movie">back to movie list</Link>
+         </div>
+        {this.state.post.map((el) => {
+         
+          if (el.id == id) {
+            return (
+              <div className= "info">
+                <div className="detail"> title :{el.title} </div>
+                <div className="detail">year :{el.release_date} </div>
 
-  return (
-    <div>
-      <div><Link to = "/movie">back to movie list</Link></div>
-      Detail
-      <div> year : {props.id} </div>
-    </div>
-  );
-};
-export default Detail;
+               
+             </div>
+            );
+          }
+          if (el.id !== id) {
+            return (
+              <div>
+                
+              </div>
+            );
+          }
+        })}
+      </div>
+    );
+  }
+}
+export default withRouter(Detail);
