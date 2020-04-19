@@ -18,7 +18,7 @@ const App = (props) => {
        
      <BrowserRouter>
      <div>
-       
+     <Navbar />
       <Switch>
 
           <Route exact path="/about">

@@ -20,7 +20,7 @@ const Navbar = () => {
     },
     {
       title: "Contact",
-      url: "/about",
+      url: "/contact",
     },
     {
       title: "Movie",
