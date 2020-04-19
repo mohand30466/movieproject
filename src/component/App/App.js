@@ -2,35 +2,42 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import MovieList from "../MovieList/MovieList";
 import Hero from "../hero/hero";
-import Detail from "../Card/Card";
+import Detail from "../Detail/Detail";
 import "./App.css";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  BrowserRouter
 } from "react-router-dom";
 
-const App = () => {
+const App = (props) => {
   return (
-    <div>
+    
        
-      <Router>
-        <Navbar />
-        <Switch>
-          
+     <BrowserRouter>
+     <div>
+       
+      <Switch>
+
           <Route exact path="/about">
             <Hero />
           </Route>
-          <Route exact path="/detail">
+
+          <Route exact path="/movie/:id/" >
             <Detail />
           </Route>
           <Route exact path="/movie">
             <MovieList />
           </Route>
-        </Switch>
-      </Router>
-    </div>
+          <Route exact path="/contact">
+           mohand30466@gmail.com
+          </Route>
+          </Switch>
+     </div>
+     </BrowserRouter>
+   
   );
 };
 export default App;
