@@ -15,8 +15,8 @@ const Navbar = () => {
       url: "/",
     },
     {
-      title: "Detail",
-      url: "/movie/:id",
+      title: "About",
+      url: "/movie/",
     },
     {
       title: "Contact",
