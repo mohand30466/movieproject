@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import { fetchMovieWithId } from "../../Api/Api";
-import './Detail.css'
+import "./Detail.css";
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,7 +12,7 @@ import {
 } from "react-router-dom";
 
 class Detail extends React.Component {
-  state = { post: [], data: [] };
+  state = { post: [], isLoding: false };
 
   async componentDidMount() {
     const data = await fetchMovieWithId();
@@ -21,32 +21,39 @@ class Detail extends React.Component {
   }
 
   render() {
+    const sponcer = ()=>{
+      return(
+        <div>loading ...</div>
+      )
+    }
     const { id } = this.props.match.params;
     return (
       <div className="detailComponent">
-         <div className='backLink'>
-             <Link to="/movie">back to movie list</Link>
-         </div>
-        {this.state.post.map((el) => {
-         
-          if (el.id == id) {
-            return (
-              <div className= "info">
-                <div className="detail"> title :{el.title} </div>
-                <div className="detail">year :{el.release_date} </div>
 
+        <div className="backLink">
+          <Link to="/movie">back to movie list</Link>
+        </div>
+       
+        {this.state.post.map((el) => {
+          if (el.id == id) {
+            return(
+          
+              
+                <div className="info">
+                  <div className="detail"> title :{el.title} </div>
+                  <div className="detail">year :{el.release_date} </div>
+                </div>
                
-             </div>
-            );
+            )
+            
           }
           if (el.id !== id) {
-            return (
-              <div>
-                
-              </div>
-            );
+            return <div></div>;
           }
         })}
+        {/* {this.setState({
+          isLoding:true})}
+        {isLoding && sponcer()} */}
       </div>
     );
   }

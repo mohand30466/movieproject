@@ -1,8 +1,9 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
-import MovieList from "../MovieList/MovieList";
-import Hero from "../hero/hero";
-import Detail from "../Detail/Detail";
+import Navbar from "./component/Navbar/Navbar";
+import MovieList from "./component/MovieList/MovieList";
+import Hero from "./component/hero/hero";
+import Detail from "./component/Detail/Detail";
+import Contact from './component/contact/contact'
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -32,7 +33,7 @@ const App = (props) => {
             <MovieList />
           </Route>
           <Route exact path="/contact">
-           mohand30466@gmail.com
+          <Contact></Contact>
           </Route>
           </Switch>
      </div>

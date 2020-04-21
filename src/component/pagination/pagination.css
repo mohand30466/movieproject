@@ -1,0 +1,17 @@
+
+.pages{
+    display: flex;
+
+   
+
+}
+.page-links{
+    text-align: center;
+    text-decoration: none;
+    border: solid gray .5px;
+    border-radius: 1rem;
+
+    width: 1rem;
+    margin: .5rem;
+    list-style-type: none;
+}
