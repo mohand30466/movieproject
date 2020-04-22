@@ -24,7 +24,7 @@ const Navbar = () => {
     },
     {
       title: "Movie",
-      url: "/movie",
+      url: "/movie/",
     },
   ];
 
@@ -33,7 +33,7 @@ const Navbar = () => {
       {links.map((link) => {
         return (
           <div className="nav-links">
-            <Link className="links" to={link.url}>{link.title}</Link>{" "}
+            <Link className="links" to={link.url}>{link.title}  </Link>{" "}
           </div>
         );
       })}

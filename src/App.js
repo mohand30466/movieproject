@@ -4,6 +4,7 @@ import MovieList from "./component/MovieList/MovieList";
 import Hero from "./component/hero/hero";
 import Detail from "./component/Detail/Detail";
 import Contact from './component/contact/contact'
+
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -21,20 +22,25 @@ const App = (props) => {
      <div>
      <Navbar />
       <Switch>
+      <Route exact path="/">
+            <Hero />
+            
+          </Route>
 
-          <Route exact path="/about">
+      <Route exact path="/about">
             <Hero />
           </Route>
 
           <Route exact path="/movie/:id/" >
             <Detail />
           </Route>
-          <Route exact path="/movie">
+          <Route exact path="/movie/">
             <MovieList />
           </Route>
           <Route exact path="/contact">
-          <Contact></Contact>
+          <Contact> </Contact>
           </Route>
+         
           </Switch>
      </div>
      </BrowserRouter>

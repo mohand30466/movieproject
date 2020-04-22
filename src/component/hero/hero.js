@@ -1,11 +1,14 @@
 import React from 'react';
 import './hero.css';
 
+
 const Hero = ()=>{
 
         return(
             <div className="heroContainer">
-                Hero
+                <h1>enjoy the vedio</h1>
+             
+
             </div>
         )
     }
