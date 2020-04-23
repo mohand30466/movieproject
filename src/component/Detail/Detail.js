@@ -31,7 +31,7 @@ class Detail extends React.Component {
       <div className="detailComponent">
 
         <div className="backLink">
-          <Link to="/movie">back to movie list</Link>
+          <Link to="/movie/latest">back to movie list</Link>
         </div>
        
         {this.state.post.map((el) => {
@@ -40,8 +40,8 @@ class Detail extends React.Component {
           
               
                 <div className="info">
-                  <div className="detail"> title :{el.title} </div>
-                  <div className="detail">year :{el.release_date} </div>
+                  <div className="detail"> Title :{el.title} </div>
+                  <div className="detail">Year :{el.release_date} </div>
                 </div>
                
             )

@@ -1,17 +1,40 @@
-import React from 'react';
-import './hero.css';
+import React from "react";
+import "./hero.css";
+import Card from "../Card/Card";
+import { tmdbNewestMovies } from "../../Api/Api";
 
+class Hero extends React.Component {
+  state = {
+    data: [],
+    currentpage: [1],
+    cardPerpage: [5],
+  };
 
-const Hero = ()=>{
+  async componentDidMount() {
+    const data = await tmdbNewestMovies();
+    this.setState({ data: data.results });
 
-        return(
-            <div className="heroContainer">
-                <h1>enjoy the vedio</h1>
-             
+    console.log(data);
+  }
 
-            </div>
-        )
-    }
+  render() {
+    const cards = this.state.data.slice(
+      this.state.currentpage,
+      this.state.cardPerpage
+    );
 
+    return (
+      <div className="heroContainer">
+         
+        <div className="hero-line">
+        <Card data={cards} />
+        </div>
+        <h1>Wellcome to Movie App </h1>
+          <p>choose your movie and enjoy it</p>
+     
+      </div>
+    );
+  }
+}
 
-export default Hero
+export default Hero;

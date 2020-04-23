@@ -18,12 +18,13 @@
     position: relative;
     width: 12rem;
     height: 20rem;
-    border: solid gray 10px;
+    border: solid 10px var(--trateryColor);
     border-radius: 5%;
-    margin: .5rem; 
+    margin: .7rem; 
     margin-top: 5rem;
    
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    cursor: progress;
    
 
     

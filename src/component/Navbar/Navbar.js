@@ -16,7 +16,7 @@ const Navbar = () => {
     },
     {
       title: "About",
-      url: "/movie/",
+      url: "/",
     },
     {
       title: "Contact",
@@ -24,7 +24,7 @@ const Navbar = () => {
     },
     {
       title: "Movie",
-      url: "/movie/",
+      url: "/movie/latest/",
     },
   ];
 

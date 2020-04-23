@@ -3,11 +3,13 @@ import "./Card.css";
 import { Link } from "react-router-dom";
 
 const Card = ({ data }) => {
+  
+
   return (
     <div className="main-card">
       {data.map((movie) => {
-        console.log(movie);
-
+        
+        
         const id = movie.id;
         return (
           <div
@@ -17,7 +19,7 @@ const Card = ({ data }) => {
             }}
             key={movie.id}
           >
-            <Link to={"/movie/" + id}>
+            <Link to={"/movie/latest/" + id}>
               <div className="title">{movie.title}</div>
               <div className="year">{movie.release_date}</div>
               <div className="rating">{movie.vote_average}</div>

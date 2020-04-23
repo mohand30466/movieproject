@@ -31,10 +31,10 @@ const App = (props) => {
             <Hero />
           </Route>
 
-          <Route exact path="/movie/:id/" >
+          <Route exact path="/movie/latest/:id" >
             <Detail />
           </Route>
-          <Route exact path="/movie/">
+          <Route exact path="/movie/latest/">
             <MovieList />
           </Route>
           <Route exact path="/contact">
