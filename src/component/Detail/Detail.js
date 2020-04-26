@@ -51,9 +51,7 @@ class Detail extends React.Component {
             return <div></div>;
           }
         })}
-        {/* {this.setState({
-          isLoding:true})}
-        {isLoding && sponcer()} */}
+       
       </div>
     );
   }

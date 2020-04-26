@@ -3,7 +3,9 @@ import Navbar from "./component/Navbar/Navbar";
 import MovieList from "./component/MovieList/MovieList";
 import Hero from "./component/hero/hero";
 import Detail from "./component/Detail/Detail";
-import Contact from './component/contact/contact'
+import Contact from './component/contact/contact';
+import SearchResult from './component/SearchResult/SearchResult'
+
 
 import "./App.css";
 import {
@@ -14,17 +16,22 @@ import {
   BrowserRouter
 } from "react-router-dom";
 
-const App = (props) => {
+const App = () => {
+  
   return (
     
        
      <BrowserRouter>
      <div>
      <Navbar />
+     {/* <SearchBar/> */}
       <Switch>
       <Route exact path="/">
             <Hero />
-            
+          </Route>
+          
+      <Route exact path="/search/">
+            <SearchResult/>
           </Route>
 
       <Route exact path="/about">

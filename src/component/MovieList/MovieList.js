@@ -2,12 +2,14 @@ import React from "react";
 import { tmdbNewestMovies } from "../../Api/Api.js";
 import "./MovieList.css";
 import { Link } from "react-router-dom";
-import Pagination from '../pagination/Pagination';
-import Card from '../Card/Card'
+import Pagination from "../pagination/Pagination";
+import Card from "../Card/Card";
+import SearchBar from "../SearchBar/SearchBar";
 
 class MovieList extends React.Component {
   state = {
     data: [],
+    term: " ",
     isLoading: false,
     curentPage: [1],
     postperPage: [5],
@@ -17,10 +19,10 @@ class MovieList extends React.Component {
     this.setState({ isLoading: true });
     const data = await tmdbNewestMovies();
     this.setState({ data: data.results });
-    this.setState({ isLoading: false});
-    console.log(data);
-    
+    this.setState({ isLoading: false });
   }
+
+
 
   render() {
     if (this.state.isloading) {
@@ -32,19 +34,21 @@ class MovieList extends React.Component {
       index0ffirstpage,
       index0flastpage
     );
-    const paginate = (num) =>{
-      this.setState({curentPage:num});
-
-    } 
+    const paginate = (num) => {
+      this.setState({ curentPage: num });
+    };
 
     return (
       <>
-      <div className="movieContainer">
-       
-        <Card data={currentpost}/>
-       
-      </div>
-      <Pagination postperpage={this.state.postperPage} totalpost={this.state.data.length} paginate={paginate}/>
+     
+        <div className="movieContainer">
+          <Card data={currentpost} />
+        </div>
+        <Pagination
+          postperpage={this.state.postperPage}
+          totalpost={this.state.data.length}
+          paginate={paginate}
+        />
       </>
     );
   }
