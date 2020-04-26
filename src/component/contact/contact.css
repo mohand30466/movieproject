@@ -1,7 +1,7 @@
 .main-contact {
     display: flex;
     flex-direction: column;
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   background-color: var(--primaryColor);
 }

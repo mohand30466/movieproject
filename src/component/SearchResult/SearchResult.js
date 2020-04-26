@@ -1,14 +1,18 @@
 import React from "react";
 import { fetchMovieWithId } from "../../Api/Api";
-// import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
+import './searchbarResult.css'
 
 class SearchResult extends React.Component {
-  state = { post: [], term: " The Hunt" };
+  state = { post: [], term: " " };
+
   async componentDidMount() {
     const data = await fetchMovieWithId();
 
     this.setState({ post: data.results });
   }
+
+
   onSearchSubmit= (e)=>{
       e.preventDefault()
       console.log(this.state.term);
@@ -35,12 +39,17 @@ class SearchResult extends React.Component {
    
       
     return (
-      <div>
-        {/* <SearchBar  onvalue={this.state.term} onSubmit={this.onSearchSubmit} onChange={(e)=>this.setState({term:e.target.value})}/> */}
-        <div>
-            {result}
-        </div>
-        SearchResult
+      <div className="searchcontainer">
+          <div>
+             <h2> Here you can search for any movies by name</h2>
+          </div>
+            <div>
+            <SearchBar  onvalue={this.state.term} onSubmit={this.onSearchSubmit} onChange={(e)=>this.setState({term:e.target.value})}/>
+
+                {result}
+            </div>
+             <div> length.</div>
+            
       </div>
     );
   }

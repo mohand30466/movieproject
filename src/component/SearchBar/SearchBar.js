@@ -14,6 +14,7 @@ import './SearchBar.css'
 const SearchBar = ({onvalue,onSubmit,onChange})=> {
   onSubmit= (e)=>{
     e.preventDefault()
+    
 
   }
 

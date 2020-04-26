@@ -1,10 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+Link
 } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 // import { Link } from "react-router-dom";
