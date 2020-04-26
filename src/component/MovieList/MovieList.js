@@ -20,6 +20,8 @@ class MovieList extends React.Component {
     const data = await tmdbNewestMovies();
     this.setState({ data: data.results });
     this.setState({ isLoading: false });
+   
+    
   }
 
 
@@ -42,6 +44,7 @@ class MovieList extends React.Component {
       <>
      
         <div className="movieContainer">
+          
           <Card data={currentpost} />
         </div>
         <Pagination

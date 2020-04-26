@@ -2,6 +2,8 @@ import React from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
 
+
+
 const Card = ({ data }) => {
   
 
@@ -9,9 +11,13 @@ const Card = ({ data }) => {
     <div className="main-card">
       {data.map((movie) => {
         
+        console.log(movie);
         
         const id = movie.id;
+        
         return (
+          <div>
+          <Link to={"/movie/latest/" + id}>
           <div
             className="card"
             style={{
@@ -19,11 +25,16 @@ const Card = ({ data }) => {
             }}
             key={movie.id}
           >
-            <Link to={"/movie/latest/" + id}>
+           
               <div className="title">{movie.title}</div>
-              <div className="year">{movie.release_date}</div>
-              <div className="rating">{movie.vote_average}</div>
-            </Link>
+              <div className="year">{movie.release_date.slice(0,4)}</div>
+              <div className="rating">
+              
+                {movie.vote_average}</div>
+                {/* <FontAwesomeIcon icon={faSmile}/> */}
+            
+          </div>
+          </Link>
           </div>
         );
       })}

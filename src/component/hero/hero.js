@@ -21,7 +21,7 @@ class Hero extends React.Component {
       const startPoint = Math.floor((Math.random(this.state.currentpage) * 15));  
       const cards = this.state.data.slice(
         startPoint,
-       startPoint + 4,
+       startPoint + 5,
     );
 
     return (

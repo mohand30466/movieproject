@@ -41,7 +41,7 @@ class Detail extends React.Component {
               
                 <div className="info">
                   <div className="detail"> Title :{el.title} </div>
-                  <div className="detail">Year :{el.release_date} </div>
+                  <div className="detail">Year :{el.release_date.slice(0,4)} </div>
                 </div>
                
             )
