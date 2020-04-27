@@ -1,5 +1,7 @@
 import React from "react";
 import "./pagination.css";
+import { Link } from "react-router-dom";
+
 
 const Pagination = ({ postperpage, totalpost, paginate }) => {
   const num = [];
@@ -11,7 +13,7 @@ const Pagination = ({ postperpage, totalpost, paginate }) => {
       <ul className="pages">
         {num.map((pagenum) => (
           <li className="page-links" key={pagenum}>
-            <a onClick={()=> paginate(pagenum)} href={"#page="+ pagenum}>{pagenum}</a>
+            <Link onClick={()=> paginate(pagenum)} to={"/movie#/page/="+ pagenum}>{pagenum}</Link>
           </li>
         ))}
       </ul>

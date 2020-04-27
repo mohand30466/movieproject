@@ -38,10 +38,10 @@ const App = () => {
             <Hero />
           </Route>
 
-          <Route exact path="/movie/latest/:id" >
+          <Route exact path="/movie/:id" >
             <Detail />
           </Route>
-          <Route exact path="/movie/latest/">
+          <Route exact path="/movie/">
             <MovieList />
           </Route>
           <Route exact path="/contact">

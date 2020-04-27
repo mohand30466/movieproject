@@ -25,23 +25,20 @@ const Navbar = () => {
     },
     {
       title: "Movie",
-      url: "/movie/latest/",
+      url: "/movie/",
       key: 4,
     },
   ];
 
   return (
     <div className="navContainer">
-       {/* <div className="logo"> 
-         <img src="https://image.shutterstock.com/image-vector/dots-letter-c-logo-design-260nw-551769190.jpg"/>
-        
-        </div> */}
+     
       
       {links.map((link) => {
         return (
          
-          <div className="nav-links">
-            <Link className="links" key={link.key} to={link.url}>{link.title}  </Link>
+          <div className="nav-links" key={link.key}>
+            <Link className="links"  to={link.url}>{link.title}  </Link>
            
           </div>
         );

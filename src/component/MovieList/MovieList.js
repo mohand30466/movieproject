@@ -1,19 +1,21 @@
 import React from "react";
 import { tmdbNewestMovies } from "../../Api/Api.js";
 import "./MovieList.css";
-import { Link } from "react-router-dom";
 import Pagination from "../pagination/Pagination";
 import Card from "../Card/Card";
 import SearchBar from "../SearchBar/SearchBar";
+import {omdbmoviesdata} from "../../Api/Api.js"
 
 class MovieList extends React.Component {
   state = {
+    odata : [],
     data: [],
     term: " ",
     isLoading: false,
     curentPage: [1],
     postperPage: [5],
   };
+ 
 
   async componentDidMount() {
     this.setState({ isLoading: true });
@@ -23,11 +25,23 @@ class MovieList extends React.Component {
    
     
   }
+  
+
+  
+  // async componentWillMount() {
+  //   const odata = await omdbmoviesdata();
+  //   console.log(odata);
+    
+    // this.setState({ omdata: odata.results });
+   
+    // console.log(this.state.odata);
+  // }
+
 
 
 
   render() {
-    if (this.state.isloading) {
+    if (this.state.isloading) { 
       return <di>isloding ...</di>;
     }
     const index0flastpage = this.state.curentPage * this.state.postperPage;
@@ -45,7 +59,7 @@ class MovieList extends React.Component {
      
         <div className="movieContainer">
           
-          <Card data={currentpost} />
+          <Card data={currentpost} odata={this.state.odata}/>
         </div>
         <Pagination
           postperpage={this.state.postperPage}
