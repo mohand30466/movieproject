@@ -12,19 +12,22 @@ import {
 } from "react-router-dom";
 
 class Detail extends React.Component {
-  state = { post: [], isLoding: false,odata:[] };
+  state = { post: [], isLoading:false,odata:[] };
 
   async componentDidMount() {
+    this.setState({isLoading:true})
     const data = await fetchMovieWithId();
     this.setState({ post: data.results });
+    this.setState({isLoading:false})
   }
 
   render() {
-    const sponcer = ()=>{
-      return(
-        <div>loading ...</div>
-      )
-    }
+    const isloading = this.state.isLoading
+    // const spinner = ()=>{
+    //   return(
+    //     <div><h1>loading ... </h1></div>
+    //   )
+    // }
     const { id } = this.props.match.params;
 
     const moreData  =  async()=> {
@@ -35,9 +38,10 @@ class Detail extends React.Component {
      
       
   }
-  console.log(this.state.odata);
+  // console.log(this.state.odata);
     return (
       <div className="detailComponent">
+         {isloading && <div><h1>loading ... </h1></div>}
 
         <div className="backLink">
           <Link to="/movie/">back to movie list</Link>
@@ -61,6 +65,7 @@ class Detail extends React.Component {
             return <div></div>;
           }
         })}
+       
        
       </div>
     );

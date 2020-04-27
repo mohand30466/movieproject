@@ -6,18 +6,23 @@ import { tmdbNewestMovies } from "../../Api/Api";
 class Hero extends React.Component {
   state = {
     data: [],
+    isloading:false,
     currentpage: [1],
     cardPerpage: [5],
   };
 
   async componentDidMount() {
+    this.setState({isloading:true})
     const data = await tmdbNewestMovies();
     this.setState({ data: data.results });
+    this.setState({isloading:false})
+
 
     console.log(data);
   }
 
   render() {
+    const isloading= this.state.isloading
       const startPoint = Math.floor((Math.random(this.state.currentpage) * 15));  
       const cards = this.state.data.slice(
         startPoint,
@@ -26,6 +31,7 @@ class Hero extends React.Component {
 
     return (
       <div className="heroContainer">
+        {isloading&& <h1>loading...</h1>}
          
         <div className="hero-line">
         <Card data={cards} />
