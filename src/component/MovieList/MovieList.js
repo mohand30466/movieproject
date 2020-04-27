@@ -27,23 +27,12 @@ class MovieList extends React.Component {
   }
   
 
-  
-  // async componentWillMount() {
-  //   const odata = await omdbmoviesdata();
-  //   console.log(odata);
-    
-    // this.setState({ omdata: odata.results });
-   
-    // console.log(this.state.odata);
-  // }
-
-
-
 
   render() {
-    if (this.state.isloading) { 
-      return <di>isloding ...</di>;
-    }
+    
+    
+    const isloading =  this.state.isLoading
+  
     const index0flastpage = this.state.curentPage * this.state.postperPage;
     const index0ffirstpage = index0flastpage - this.state.postperPage;
     const currentpost = this.state.data.slice(
@@ -55,18 +44,21 @@ class MovieList extends React.Component {
     };
 
     return (
-      <>
+      <div>
+    
      
         <div className="movieContainer">
+        {isloading&& <h1>please wait isLoading...</h1>}
           
-          <Card data={currentpost} odata={this.state.odata}/>
+          <Card data={currentpost} odata={this.state.odata} isloading={this.state.isLoading}/>
         </div>
         <Pagination
           postperpage={this.state.postperPage}
           totalpost={this.state.data.length}
           paginate={paginate}
         />
-      </>
+     
+      </div>
     );
   }
 }
