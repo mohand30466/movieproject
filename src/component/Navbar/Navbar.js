@@ -8,6 +8,7 @@ import SearchBar from "../SearchBar/SearchBar";
 
 const Navbar = () => {
   const links = [
+   
     {
       title: " Home",
       url: "/",
@@ -28,6 +29,7 @@ const Navbar = () => {
       url: "/movie/",
       key: 4,
     },
+   
   ];
 
   return (

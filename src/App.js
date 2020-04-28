@@ -28,6 +28,8 @@ const App = () => {
       <Switch>
       <Route exact path="/">
             <Hero />
+           <MovieList />
+            
           </Route>
           
       <Route exact path="/search">
