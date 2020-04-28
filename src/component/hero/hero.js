@@ -23,11 +23,11 @@ class Hero extends React.Component {
 
   render() {
     const isloading= this.state.isloading
-    
+
       const startPoint = Math.floor((Math.random(this.state.currentpage) * 15));  
       const cards = this.state.data.slice(
         startPoint,
-       startPoint + 5,
+       startPoint + 4,
     );
 
     return (

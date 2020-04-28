@@ -66,3 +66,33 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+{this.state.post.map((el) => {
+return (
+
+<div className="info">
+<div className="detail"> Title :{el.title} </div>
+<div className="detail">Year :{el.release_date.slice(0, 4)} </div>
+{/_ <div className="detail"> Tybe :{moreData.release_date} </div> _/}
+</div>
+);
+})}
+
+const obj = {};
+const { id } = this.props.match.params;
+this.setState({ isLoading: true });
+const tmdbdata = await fetchMovieWithId(id);
+const imdbId = data.imdb_id;
+const omdbData = await fetchOmdbMovie(imdbId);
+
+    //fetch omdb data with the imdb_id from data.imdb_id
+    obj.title = tmdbData.title;
+    obj.runTime = tmbdData.runtime;
+    this.setState({ isLoading: false, movieDetail: obj });
+
+{this.state.movieDetail && (
+<>
+<div>TITLE:{this.state.movieDetail.title}</div>
+<div>RUNTIME{this.state.movieDetail.runTime} minutes</div>
+</>
+)}

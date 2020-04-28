@@ -16,7 +16,7 @@ const Navbar = () => {
     },
     {
       title: "Search",
-      url: "/search",
+      url: "/search/",
       key: 2,
     },
     {
