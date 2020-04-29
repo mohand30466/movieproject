@@ -14,33 +14,30 @@ import {
 } from "react-router-dom";
 
 class Detail extends React.Component {
-  
   state = { movieDetail: null, isLoading: false };
 
   async componentDidMount() {
     const obj = {};
     const { id } = this.props.match.params;
     this.setState({ isLoading: true });
-   
+
     const tmdbdata = await fetchMovieWithId(id);
-  
+
     const tmdbid = tmdbdata.imdb_id;
     const omdbdata = await omdbmoviesdata(tmdbid);
     obj.title = tmdbdata.title;
     obj.runtime = tmdbdata.runtime;
     obj.rate = tmdbdata.vote_average;
-    obj.year = tmdbdata.release_date.slice(0,4);
-    obj.type = omdbdata.Genre
-    obj.writer = omdbdata.Writer
-    
+    obj.year = tmdbdata.release_date.slice(0, 4);
+    obj.type = omdbdata.Genre;
+    obj.writer = omdbdata.Writer;
+
     this.setState({ isLoading: false, movieDetail: obj });
-    // console.log(this.state.movieDetail);
-    
   }
 
   render() {
     const isloading = this.state.isLoading;
-    
+
     return (
       <div className="detailComponent">
         {isloading && (
@@ -53,24 +50,52 @@ class Detail extends React.Component {
           <Link to="/movie/">back to movie list</Link>
         </div>
         <div className="info">
+          {this.state.movieDetail && (
+            <>
+              <div className="detail">
+                {" "}
+                <span className="subtitle">Title</span> :
+                {this.state.movieDetail.title}
+              </div>
+              <div className="detail">
+                <span className="subtitle">Year</span> :
+                {this.state.movieDetail.year}
+              </div>
 
-        {this.state.movieDetail && (
-          <>
-          <div className="detail"> <span className="subtitle">Title</span> :{this.state.movieDetail.title}</div>
-          <div className="detail"><span className="subtitle">Year</span> :{this.state.movieDetail.year}</div>
-
-          <div className="detail"><span className="subtitle">Runtime :</span>  {this.state.movieDetail.runtime} minutes</div>
-          <div className="detail"> <span className="subtitle">Rating :</span>{this.state.movieDetail.rate}stars</div>
-          <div className="detail"> <span className="subtitle">Tybe :</span>{this.state.movieDetail.type}</div>
-          <div className="detail"> <span className="subtitle">Writer/s:</span>{this.state.movieDetail.writer}</div>
-
-
-
-          </>
-        )} 
+              <div className="detail">
+                <span className="subtitle">Runtime :</span>{" "}
+                {this.state.movieDetail.runtime} minutes
+              </div>
+              <div className="detail">
+                {" "}
+                <span className="subtitle">Rating :</span>
+                {this.state.movieDetail.rate}{" "}
+                <img
+                      style={{ width: "15px", height: "13px" }}
+                      src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/13575076871557740374-64.png"
+                    />
+              </div>
+              <div className="detail">
+                {" "}
+                <span className="subtitle">Tybe :</span>
+                {this.state.movieDetail.type}
+              </div>
+              <div className="detail">
+                {" "}
+                <span className="subtitle">Writer/s:</span>
+                {this.state.movieDetail.writer}
+              </div>
+            </>
+          )}
         </div>
       </div>
     );
   }
 }
 export default withRouter(Detail);
+// Trailers
+// Run time
+// Budget
+// Awards
+// Casts
+

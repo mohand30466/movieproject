@@ -24,10 +24,11 @@ const Card = ({ data, odata,isloading}) => {
                 className="card"
                 style={{
                   backgroundImage: `url(https://image.tmdb.org/t/p/w300/${movie.poster_path})`,
+                  backgroundSize:'cover',
                 }}
                 key={movie.id}
               >
-                <div className="title">{movie.title}</div>
+                <div className="title">latest>{" "}{movie.title}</div>
                 <div className="year">{movie.release_date.slice(0, 4)}</div>
                 <div className="rating">
                   <div>
