@@ -40,8 +40,8 @@ class Hero extends React.Component {
     };
     const isloading = this.state.isloading;
 
-    const startPoint = Math.floor(Math.random(this.state.currentpage) * 15);
-    const cards = this.state.data.slice(startPoint, startPoint + 1);
+    const startPoint = Math.floor(Math.random(1) * 15);
+    const cards = this.state.data.slice(startPoint, startPoint + 5);
     console.log(cards);
     return (
       <div className="heroContainer">
@@ -50,7 +50,7 @@ class Hero extends React.Component {
         <div className="hero-line" style={{padding:50}}>
         <div>slide to get the movies</div>
           <Slider {...setting}>
-            {this.state.data.map((el)=>{
+            {cards.map((el)=>{
                const id = el.id;
                
               return(
