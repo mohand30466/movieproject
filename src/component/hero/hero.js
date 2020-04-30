@@ -48,11 +48,13 @@ class Hero extends React.Component {
         {isloading && <h1>loading...</h1>}
 
         <div className="hero-line" style={{padding:50}}>
+        <div>slide to get the movies</div>
           <Slider {...setting}>
             {this.state.data.map((el)=>{
                const id = el.id;
                
               return(
+               
                 <Link to={"/movie/" + id}>
                 <div
                 className="cards" 

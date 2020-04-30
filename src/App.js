@@ -28,7 +28,7 @@ const App = () => {
       <Switch>
       <Route exact path="/">
             <Hero />
-           {/* <MovieList /> */}
+           <MovieList />
             
           </Route>
           
