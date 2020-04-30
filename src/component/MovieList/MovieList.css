@@ -1,62 +1,47 @@
+.movieContainer {
+  display: flex;
+  justify-content: center;
 
-.movieContainer{
-     display:flex; 
-     justify-content: center;
-
-     min-height: 80vh;
-     max-width: 100vw;
-     background-color: tomato;
-     margin: 0 auto;
-     
-
-   
-
+  min-height: 80vh;
+  max-width: 100vw;
+  background-color: tomato;
+  margin: 0 auto;
 }
-.card{
-    
-  
-    position: relative;
-    width: 12rem;
-    height: 20rem;
-    border: solid 10px var(--trateryColor);
-    border-radius: 5%;
-    margin: .7rem; 
-    margin-top: 5rem;
-   
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    cursor: progress;
-   
+.card {
+  position: relative;
+  width: 12rem;
+  height: 20rem;
+  border: solid 10px var(--trateryColor);
+  border-radius: 5%;
+  margin: 0.7rem;
+  margin-top: 5rem;
 
-    
-
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+ 
 }
-.title{
-
-    font-size: 1.5rem;
-    font-family: monospace;
-    text-align: center;
-    background-color:var(--seconderyColor);
-    border-radius: 1px; 
- }
-.year{
-    font-size: 1.5rem;
-    font-family: monospace;
-   position: absolute;
-   color: white;
-   top: 296px;
-   background-color:var(--seconderyColor);
-   border-radius: 2px;
-
+.title {
+  font-size: 1.5rem;
+  font-family: monospace;
+  text-align: center;
+  background-color: var(--seconderyColor);
+  border-radius: 1px;
 }
-.rating{
-    font-size: 1.5rem;
-    font-family: monospace;
-   position: absolute;
-   color: rgb(235, 221, 221);
-   top: 271px;
-   background-color:var(--seconderyColor);
-   left: 159px;
-   border-radius: 2px;
-
-
-} 
+.year {
+  font-size: 1.5rem;
+  font-family: monospace;
+  position: absolute;
+  color: white;
+  top: 296px;
+  background-color: var(--seconderyColor);
+  border-radius: 2px;
+}
+.rating {
+  font-size: 1.5rem;
+  font-family: monospace;
+  position: absolute;
+  color: rgb(235, 221, 221);
+  top: 271px;
+  background-color: var(--seconderyColor);
+  left: 159px;
+  border-radius: 2px;
+}

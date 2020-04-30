@@ -4,11 +4,10 @@ import "./MovieList.css";
 import Pagination from "../pagination/Pagination";
 import Card from "../Card/Card";
 import SearchBar from "../SearchBar/SearchBar";
-import {omdbmoviesdata} from "../../Api/Api.js"
 
 class MovieList extends React.Component {
   state = {
-    odata : [],
+    
     data: [],
     term: " ",
     isLoading: false,
