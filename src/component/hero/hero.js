@@ -47,7 +47,7 @@ class Hero extends React.Component {
       <div className="heroContainer">
         {isloading && <h1>loading...</h1>}
 
-        <div className="hero-line" style={{padding:24}}>
+        <div className="hero-line" style={{padding:50}}>
           <Slider {...setting}>
             {this.state.data.map((el)=>{
                const id = el.id;

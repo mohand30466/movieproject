@@ -1,34 +1,28 @@
-.heroContainer{
-    
-    text-align: center;
-    color: red;
-    height: 90vh;
-    background-image: url('https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
-    background-repeat: no-repeat;
-    background-size: cover;
- 
+.heroContainer {
+  text-align: center;
+  color: red;
+  height: 90vh;
+  background-image: url("https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.hero-line-logo{
-    
-    height: 40vmin;
+.hero-line-logo {
+  height: 40vmin;
+}
+.hero-line {
+  text-align: center;
+}
+.hero-line-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 
-}
-.hero-line{
-    text-align: center;
-}
-.hero-line-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-   
-    flex-direction: column;
-  
-    min-height: 100vh;
- 
-    /* background-color: thistle; */
-   
-    font-size: calc(10px + 2vmin);
+  flex-direction: column;
+
+  min-height: 100vh;
+
+  font-size: calc(10px + 2vmin);
 }
 .cards {
   position: relative;
@@ -36,44 +30,44 @@
   height: 30rem;
   border: solid 10px var(--trateryColor);
   border-radius: 5%;
- margin: auto;
+  margin: auto;
 
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   cursor: pointer;
 }
 .slide .slick-prev,
-.slide .slick-next{
-    position: absolute;
-    top:50%;
-    Z-index: 1;
+.slide .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
 }
-.slide{
-    position: relative;
+.slide {
+  position: relative;
 }
 
 .slide .slick-prev,
-.slide .slick-next{
-    position: absolute;
-    top:50%;
-    Z-index: 1;
+.slide .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
 }
 .years {
-    font-size: 1.5rem;
-    font-family: monospace;
-    position: absolute;
-    color: white;
-    top: 444px;
-    background-color: var(--seconderyColor);
-    border-radius: 2px;
-    left: 16px;
-  }
-  .ratings {
-    font-size: 1.5rem;
-    font-family: monospace;
-    position: absolute;
-    color: rgb(235, 221, 221);
-    top: 425px;
-    background-color: var(--seconderyColor);
-    left: 330px;
-    border-radius: 2px;
-  }
+  font-size: 1.5rem;
+  font-family: monospace;
+  position: absolute;
+  color: white;
+  top: 444px;
+  background-color: var(--seconderyColor);
+  border-radius: 2px;
+  left: 16px;
+}
+.ratings {
+  font-size: 1.5rem;
+  font-family: monospace;
+  position: absolute;
+  color: rgb(235, 221, 221);
+  top: 425px;
+  background-color: var(--seconderyColor);
+  left: 330px;
+  border-radius: 2px;
+}
