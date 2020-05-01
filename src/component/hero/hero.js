@@ -17,10 +17,8 @@ class Hero extends React.Component {
   };
 
   async componentDidMount() {
-    this.setState({ isloading: true });
     const data = await tmdbNewestMovies();
     this.setState({ data: data.results });
-    this.setState({ isloading: false });
     console.log(data.results);
     
 
@@ -30,7 +28,7 @@ class Hero extends React.Component {
   render() {
     const setting = {
       dost: true,
-      fade: true,
+      fade: false,
       infinite: true,
       speed: 500,
       slidestoshow: 1,
@@ -38,17 +36,16 @@ class Hero extends React.Component {
       slidetoscroll: 1,
       className: "slide",
     };
-    const isloading = this.state.isloading;
 
     const startPoint = Math.floor(Math.random(1) * 15);
-    const cards = this.state.data.slice(startPoint, startPoint + 5);
+    const cards = this.state.data.slice(startPoint, startPoint + 4);
     console.log(cards);
+  
     return (
       <div className="heroContainer">
-        {isloading && <h1>loading...</h1>}
 
         <div className="hero-line" style={{padding:50}}>
-        <div>slide to get the movies</div>
+       
           <Slider {...setting}>
             {cards.map((el)=>{
                const id = el.id;
@@ -64,7 +61,7 @@ class Hero extends React.Component {
                 }}
                 key={el.id}
               >
-                <div className="title">latest>{" "}{el.title}</div>
+                {/* <div className="title">latest>{" "}{el.title}</div> */}
                 <div className="years">{el.release_date.slice(0, 4)}</div>
                 <div className="ratings">
                   <div>

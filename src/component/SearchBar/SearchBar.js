@@ -12,11 +12,11 @@ import './SearchBar.css'
 
 
 const SearchBar = ({onvalue,onSubmit,onChange})=> {
-  onSubmit= (e)=>{
-    e.preventDefault()
+  // onSubmit= (e)=>{
+  //   e.preventDefault()
     
 
-  }
+  // }
 
  
 

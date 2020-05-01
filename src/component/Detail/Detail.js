@@ -19,7 +19,7 @@ class Detail extends React.Component {
   async componentDidMount() {
     const obj = {};
     const { id } = this.props.match.params;
-    this.setState({ isLoading: true });
+    // this.setState({ isLoading: true });
 
     const tmdbdata = await fetchMovieWithId(id);
 
@@ -32,19 +32,19 @@ class Detail extends React.Component {
     obj.type = omdbdata.Genre;
     obj.writer = omdbdata.Writer;
 
-    this.setState({ isLoading: false, movieDetail: obj });
+    this.setState({  movieDetail: obj });
   }
 
   render() {
-    const isloading = this.state.isLoading;
+    // const isloading = this.state.isLoading;
 
     return (
       <div className="detailComponent">
-        {isloading && (
+        {/* {this.state.isloading && (
           <div>
             <h1>loading ... </h1>
           </div>
-        )}
+        )} */}
 
         <div className="backLink">
           <Link to="/movie/">back to movie list</Link>
@@ -93,9 +93,5 @@ class Detail extends React.Component {
   }
 }
 export default withRouter(Detail);
-// Trailers
-// Run time
-// Budget
-// Awards
-// Casts
+
 
