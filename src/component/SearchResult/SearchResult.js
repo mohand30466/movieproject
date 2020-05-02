@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import { tmdbNewestMovies } from "../../Api/Api";
 import SearchBar from "../SearchBar/SearchBar";
 import "./searchbarResult.css";
@@ -49,4 +50,4 @@ class SearchResult extends React.Component {
     );
   }
 }
-export default SearchResult;
+export default withRouter(SearchResult);

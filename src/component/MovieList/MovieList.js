@@ -24,7 +24,7 @@ class MovieList extends React.Component {
 
     this.setState({ data: data.results });
     this.setState({ isLoading: false});
-    console.log(this.state.img);
+   
     
     
   }

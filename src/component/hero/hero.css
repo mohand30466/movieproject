@@ -1,7 +1,7 @@
 .heroContainer {
   text-align: center;
-  color: red;
-  height: 90vh;
+  /* color: red; */
+  height: 100vh;
   background-image: url("https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
   background-repeat: no-repeat;
   background-size: cover;
@@ -70,4 +70,10 @@
   background-color: var(--seconderyColor);
   left: 330px;
   border-radius: 2px;
+}
+.searchbar{
+  display: flex;
+  justify-content: center;
+  
+  height: 2rem;
 }
