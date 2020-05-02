@@ -21,7 +21,7 @@ export const fetchMovieWithId = async (id) => {
 
 
 export const omdbmoviesdata = async (id) => {
-    const response = await fetch(`http://www.omdbapi.com/?apikey=${OMDBKEY}&i=${id}&t=`);
+    const response = await fetch(`https://www.omdbapi.com/?apikey=${OMDBKEY}&i=${id}&t=`);
     const omdbdata = await response.json()
     console.log(omdbdata);
     return omdbdata;
