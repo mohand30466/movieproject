@@ -9,7 +9,7 @@ import SearchBar from "../SearchBar/SearchBar";
 
 class MovieList extends React.Component {
   state = {
-    img:[],
+    // img:[],
     data: [],
     term: " ",
     isLoading: false,
@@ -20,10 +20,10 @@ class MovieList extends React.Component {
   async componentDidMount() {
     this.setState({ isLoading: true });
     const data = await tmdbNewestMovies();
-    const dbImg= await tmdbimages();
+    // const dbImg= await tmdbimages();
 
     this.setState({ data: data.results });
-    this.setState({ isLoading: false,img:dbImg.images });
+    this.setState({ isLoading: false});
     console.log(this.state.img);
     
     
