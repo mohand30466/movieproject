@@ -33,6 +33,8 @@ class Detail extends React.Component {
     obj.writer = omdbdata.Writer;
 
     this.setState({  movieDetail: obj });
+    console.log(tmdbdata);
+    
   }
 
   render() {

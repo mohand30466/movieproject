@@ -5,8 +5,11 @@ import React from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
 
-const Card = ({ data}) => {
+
+const Card = ({ data, imgagepath}) => {
   // console.log(odata);
+  
+  const url = "https://image.tmdb.org/t/p/w300/"
 
   return (
     
@@ -23,7 +26,7 @@ const Card = ({ data}) => {
               <div
                 className="card"
                 style={{
-                  backgroundImage: `url(https://image.tmdb.org/t/p/w300/${movie.poster_path})`,
+                  backgroundImage: `url(${url}${movie.poster_path})`,
                   backgroundSize:'cover',
                 }}
                 key={movie.id}

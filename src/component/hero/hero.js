@@ -61,7 +61,7 @@ class Hero extends React.Component {
                 }}
                 key={el.id}
               >
-                {/* <div className="title">latest>{" "}{el.title}</div> */}
+                <div className="title">latest>{" "}{el.title}</div>
                 <div className="years">{el.release_date.slice(0, 4)}</div>
                 <div className="ratings">
                   <div>
