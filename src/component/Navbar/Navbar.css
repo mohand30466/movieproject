@@ -9,7 +9,7 @@
   color: var(--textColor);
   /* border: red 2px solid; */
   list-style-type: none;
-  background-color: slategray;
+  background-color: rgb(59, 71, 83);
 }
 .nav-links {
   display: flex;

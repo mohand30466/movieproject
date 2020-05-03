@@ -1,22 +1,29 @@
 .heroContainer {
   text-align: center;
+  
   /* color: red; */
   height: 100vh;
-  background-image: url("https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-image: url("https://images.unsplash.com/photo-1523821741446-edb2b68bb7a0?ixlib=rb-1.2.1&w=1000&q=80");
+  /* background-image: url("https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"); */
   background-repeat: no-repeat;
   background-size: cover;
 }
 .hero-line-logo {
   height: 40vmin;
+  
 }
 .hero-line {
+  display: inline-block;
   text-align: center;
+  cursor: none;
+
 }
 .hero-line-header {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-items: center;
+  
 
   flex-direction: column;
 
@@ -26,10 +33,10 @@
 }
 .cards {
   position: relative;
-  width: 23rem;
-  height: 30rem;
-  border: solid 10px var(--trateryColor);
-  border-radius: 5%;
+  width: 32rem;
+  height: 31rem;
+  /* border: solid 10px var(--trateryColor); */
+  /* border-radius: 5%; */
   margin: auto;
 
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -55,25 +62,39 @@
   font-size: 1.5rem;
   font-family: monospace;
   position: absolute;
-  color: white;
-  top: 444px;
-  background-color: var(--seconderyColor);
+  color: blue;
+  bottom: 0;
+  left: -469px;
+  /* background-color: var(--seconderyColor); */
   border-radius: 2px;
-  left: 16px;
+  
 }
 .ratings {
   font-size: 1.5rem;
   font-family: monospace;
   position: absolute;
-  color: rgb(235, 221, 221);
-  top: 425px;
-  background-color: var(--seconderyColor);
-  left: 330px;
+  color: blue;
+   bottom: 0;
+  /* background-color: var(--seconderyColor); */
+  right: 12px;
   border-radius: 2px;
 }
-.searchbar{
-  display: flex;
-  justify-content: center;
-  
-  height: 2rem;
+
+.details{
+  position: absolute;
+
+  height: 25%;
+  width: 32rem;
+  background-color: rgba(26, 25, 25, 0.199);
+  color: white;
+  bottom: 0;
+}
+.btn{
+  position: absolute;
+
+  height: 1rem;
+  width: 2.5rem;
+  left: -248px;
+  bottom: 1rem;
+
 }

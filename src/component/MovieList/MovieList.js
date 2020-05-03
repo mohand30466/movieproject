@@ -1,15 +1,11 @@
 import React from "react";
-import { tmdbimages } from "../../Api/Api.js";
-
 import { tmdbNewestMovies } from "../../Api/Api.js";
 import "./MovieList.css";
-import Pagination from "../pagination/Pagination";
+// import Pagination from "../pagination/Pagination";
 import Card from "../Card/Card";
-import SearchBar from "../SearchBar/SearchBar";
 
 class MovieList extends React.Component {
   state = {
-    // img:[],
     data: [],
     term: " ",
     isLoading: false,
@@ -23,42 +19,49 @@ class MovieList extends React.Component {
     // const dbImg= await tmdbimages();
 
     this.setState({ data: data.results });
-    this.setState({ isLoading: false});
-   
-    
-    
+    this.setState({ isLoading: false });
   }
 
   render() {
     const isloading = this.state.isLoading;
 
-    const index0flastpage = this.state.curentPage * this.state.postperPage;
-    const index0ffirstpage = index0flastpage - this.state.postperPage;
-    const currentpost = this.state.data.slice(
-      index0ffirstpage,
-      index0flastpage
-    );
-    const paginate = (num) => {
-      this.setState({ curentPage: num });
-    };
+    // const index0flastpage = this.state.curentPage * this.state.postperPage;
+    // const index0ffirstpage = index0flastpage - this.state.postperPage;
+    // const currentpost = this.state.data.slice(
+    //   index0ffirstpage,
+    //   index0flastpage
+    // );
+    //  this.state.data = (num) => {
+    //   this.setState({ curentPage: num });
+    // };
 
     return (
-      <div>
+      <div >
+        {/* <div className="info">
+          {" "}
+          <h1>Wellcome to movie Area </h1>
+        </div> */}
+        {/* <div style={{textAlign:"center"}}>
+          {" "}
+          <p>Discover your movies and enjoy it</p>
+        </div> */}
+
+        
+
         <div className="movieContainer">
           {isloading && <h1>please wait isLoading...</h1>}
 
           <Card
-            data={currentpost}
-            odata={this.state.odata}
+            data={this.state.data}
             isloading={this.state.isLoading}
             // imagepath={this.state.img}
           />
         </div>
-        <Pagination
+        {/* <Pagination
           postperpage={this.state.postperPage}
           totalpost={this.state.data.length}
           paginate={paginate}
-        />
+        /> */}
       </div>
     );
   }

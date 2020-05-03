@@ -30,7 +30,7 @@ const App = () => {
       <Route exact path="/">
           
             <Hero />
-           {/* <MovieList /> */}
+           <MovieList />
             
           </Route>
           

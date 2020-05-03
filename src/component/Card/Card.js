@@ -31,7 +31,7 @@ const Card = ({ data, imgagepath}) => {
                 }}
                 key={movie.id}
               >
-                <div className="title">latest>{" "}{movie.title}</div>
+                <div className="title">{" "}{movie.title}</div>
                 <div className="year">{movie.release_date.slice(0, 4)}</div>
                 <div className="rating">
                   <div>
