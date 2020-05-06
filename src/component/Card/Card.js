@@ -6,7 +6,7 @@ import "./Card.css";
 import { Link } from "react-router-dom";
 
 
-const Card = ({ data, imgagepath}) => {
+const Card = ({ data }) => {
   // console.log(odata);
   
   const url = "https://image.tmdb.org/t/p/w300/"
@@ -32,7 +32,9 @@ const Card = ({ data, imgagepath}) => {
                 key={movie.id}
               >
                 <div className="title">{" "}{movie.title}</div>
-                <div className="year">{movie.release_date.slice(0, 4)}</div>
+                <div className="year">
+                
+                  {movie.release_date.slice(0, 4)}</div>
                 <div className="rating">
                   <div>
                     <img

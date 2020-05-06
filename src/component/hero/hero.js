@@ -6,6 +6,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import { useParams } from "react-router-dom";
+// import { fetchMovieWithId } from "../../Api/Api";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link,
+//   BrowserRouter,
+// } from "react-router-dom";
 
 class Hero extends React.Component {
   state = {
@@ -17,9 +27,15 @@ class Hero extends React.Component {
   };
 
   async componentDidMount() {
+    const { id }= this.props.match.params;
     const data = await tmdbNewestMovies();
     this.setState({ data: data.results });
-    console.log(data.results);
+    // console.log(data.results);
+  }
+
+  viewMovie(){
+    const url ="https://themoviedb.org/movie/" 
+    window.location.href= url
   }
 
   render() {
@@ -37,7 +53,7 @@ class Hero extends React.Component {
 
     const startPoint = Math.floor(Math.random(1) * 15);
     const cards = this.state.data.slice(startPoint, startPoint + 4);
-    console.log(cards);
+    // console.log(cards);
 
     return (
       <div className="heroContainer">
@@ -72,7 +88,7 @@ class Hero extends React.Component {
                       </div>
                       <div>{el.vote_average}</div>
                       <div className="years">{el.release_date.slice(0, 4)}</div>
-                      <div className="btn"><Link  to={"/movie/" + id}> <button style={{backgroundColor:"blue"}}>Detail</button></Link></div>
+                      <div className="btn"><Link  to={"/movie/" + id}> <button style={{backgroundColor:"blue"}} onClick={this.viewMovie.bind(this)}>Detail</button></Link></div>
                      
                     </div>
 
@@ -92,4 +108,4 @@ class Hero extends React.Component {
   }
 }
 
-export default Hero;
+export default withRouter (Hero);

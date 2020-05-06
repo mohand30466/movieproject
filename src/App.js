@@ -3,10 +3,9 @@ import Navbar from "./component/Navbar/Navbar";
 import MovieList from "./component/MovieList/MovieList";
 import Hero from "./component/hero/hero";
 import Detail from "./component/Detail/Detail";
-import Contact from './component/contact/contact';
-import SearchResult from './component/SearchResult/SearchResult'
+import Contact from "./component/contact/contact";
+import SearchResult from "./component/SearchResult/SearchResult";
 // import SearchBar from './component/SearchBar/SearchBar'
-
 
 import "./App.css";
 import {
@@ -14,48 +13,41 @@ import {
   Switch,
   Route,
   Link,
-  BrowserRouter
+  BrowserRouter,
 } from "react-router-dom";
 
 const App = () => {
-  
   return (
-    
-       
-     <BrowserRouter>
-     <div>
-     <Navbar />
-     {/* <SearchBar/> */}
-      <Switch>
-      <Route exact path="/">
-          
+    <BrowserRouter>
+      <div>
+        <Navbar />
+        {/* <SearchBar/> */}
+        <Switch>
+          <Route exact path="/">
             <Hero />
-           <MovieList />
-            
-          </Route>
-          
-      <Route exact path="/search">
-            <SearchResult/>
+            <MovieList />
           </Route>
 
-      <Route exact path="/about">
+          <Route exact path="/search">
+            <SearchResult />
+          </Route>
+
+          <Route exact path="/about">
             <Hero />
           </Route>
 
-          <Route exact path="/movie/:id" >
+          <Route exact path="/movie/:id">
             <Detail />
           </Route>
           <Route exact path="/movie/">
             <MovieList />
           </Route>
           <Route exact path="/contact">
-          <Contact> </Contact>
+            <Contact> </Contact>
           </Route>
-         
-          </Switch>
-     </div>
-     </BrowserRouter>
-   
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 };
 export default App;

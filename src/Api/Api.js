@@ -27,12 +27,13 @@ export const omdbmoviesdata = async (id) => {
     return omdbdata;
 
 }
-// export const tmdbimages = async () => {
-//   const response = await fetch(
-//     `https://api.themoviedb.org/3/configuration?api_key=${KEY}&`
-//   );
-//   const dbImg = await response.json()
+
+export const  searchMovie  = async (term) => {
+  const response = await fetch(
+    `https://api.themoviedb.org/3/search/movie?api_key=${KEY}&query=${term}`
+  );
+  const dbImg = await response.json()
+ console.log(dbImg);
  
-  
-//   return dbImg;
-// };
+  return dbImg;
+};

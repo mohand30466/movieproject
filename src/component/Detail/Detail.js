@@ -32,13 +32,13 @@ class Detail extends React.Component {
     obj.type = omdbdata.Genre;
     obj.writer = omdbdata.Writer;
 
-    this.setState({  movieDetail: obj });
+    this.setState({ movieDetail: obj });
     console.log(tmdbdata);
-    
   }
 
   render() {
     // const isloading = this.state.isLoading;
+    const ur = "https://image.tmdb.org/t/p/w300/";
 
     return (
       <div className="detailComponent">
@@ -73,9 +73,9 @@ class Detail extends React.Component {
                 <span className="subtitle">Rating :</span>
                 {this.state.movieDetail.rate}{" "}
                 <img
-                      style={{ width: "15px", height: "13px" }}
-                      src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/13575076871557740374-64.png"
-                    />
+                  style={{ width: "15px", height: "13px" }}
+                  src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/13575076871557740374-64.png"
+                />
               </div>
               <div className="detail">
                 {" "}
@@ -87,6 +87,12 @@ class Detail extends React.Component {
                 <span className="subtitle">Writer/s:</span>
                 {this.state.movieDetail.writer}
               </div>
+              {/* <div
+                className="player"
+                style={{
+                  backgroundImage: `url(${this.state.movieDetail.poster_path})`,
+                }}
+              ></div> */}
             </>
           )}
         </div>
@@ -95,5 +101,3 @@ class Detail extends React.Component {
   }
 }
 export default withRouter(Detail);
-
-

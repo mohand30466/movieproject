@@ -6,6 +6,7 @@
     height: 100vh;
 }  */
 .input{
+    float: right;
     height: rem;
     width: 20rem;
     border-radius: 2%;
