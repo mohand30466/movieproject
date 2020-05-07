@@ -33,10 +33,10 @@ class Hero extends React.Component {
     // console.log(data.results);
   }
 
-  viewMovie(){
-    const url ="https://themoviedb.org/movie/" 
-    window.location.href= url
-  }
+  // viewMovie(){
+  //   const url ="https://themoviedb.org/movie/" 
+  //   window.location.href= url
+  // }
 
   render() {
     const setting = {
@@ -88,7 +88,7 @@ class Hero extends React.Component {
                       </div>
                       <div>{el.vote_average}</div>
                       <div className="years">{el.release_date.slice(0, 4)}</div>
-                      <div className="btn"><Link  to={"/movie/" + id}> <button style={{backgroundColor:"blue"}} onClick={this.viewMovie.bind(this)}>Detail</button></Link></div>
+                      <div className="btn"><Link  to={"/movie/" + id}> <button >Detail</button></Link></div>
                      
                     </div>
 

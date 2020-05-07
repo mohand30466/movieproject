@@ -14,16 +14,16 @@ const Navbar = () => {
       url: "/",
       key: 1,
     },
-    {
-      title: "Search",
-      url: "/search/",
-      key: 2,
-    },
-    {
-      title: "Contact",
-      url: "/contact",
-      key: 3,
-    },
+    // {
+    //   title: "Search",
+    //   url: "/search/",
+    //   key: 2,
+    // },
+    // {
+    //   title: "Contact",
+    //   url: "/contact",
+    //   key: 3,
+    // },
     {
       title: "Movie",
       url: "/movie/",

@@ -62,7 +62,7 @@
   font-size: 1.5rem;
   font-family: monospace;
   position: absolute;
-  color: blue;
+  color: rgb(156, 23, 23);
   bottom: 0;
   left: -469px;
   /* background-color: var(--seconderyColor); */
@@ -73,7 +73,7 @@
   font-size: 1.5rem;
   font-family: monospace;
   position: absolute;
-  color: blue;
+  color: rgb(156, 23, 23);
    bottom: 0;
   /* background-color: var(--seconderyColor); */
   right: 12px;

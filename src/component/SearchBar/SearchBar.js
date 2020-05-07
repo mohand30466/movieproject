@@ -17,6 +17,7 @@ class SearchBar extends React.Component {
 
   render() {
     console.log(this.state.data);
+    
 
 
     return (

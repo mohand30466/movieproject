@@ -28,9 +28,9 @@ const App = () => {
             <MovieList />
           </Route>
 
-          <Route exact path="/search">
+          {/* <Route exact path="/search">
             <SearchResult />
-          </Route>
+          </Route> */}
 
           <Route exact path="/about">
             <Hero />
@@ -42,9 +42,9 @@ const App = () => {
           <Route exact path="/movie/">
             <MovieList />
           </Route>
-          <Route exact path="/contact">
+          {/* <Route exact path="/contact">
             <Contact> </Contact>
-          </Route>
+          </Route> */}
         </Switch>
       </div>
     </BrowserRouter>

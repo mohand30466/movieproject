@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import { fetchMovieWithId } from "../../Api/Api";
 import { omdbmoviesdata } from "../../Api/Api.js";
+import Showmovie from "../Showmovie/Showmovie"
 
 import "./Detail.css";
 import {
@@ -31,12 +32,19 @@ class Detail extends React.Component {
     obj.year = tmdbdata.release_date.slice(0, 4);
     obj.type = omdbdata.Genre;
     obj.writer = omdbdata.Writer;
+    obj.background = tmdbdata.backdrop_path
+    obj.poster = tmdbdata.poster_path
+    // obj.poster_path =omdbdata
 
     this.setState({ movieDetail: obj });
     console.log(tmdbdata);
+    console.log(omdbdata);
+    
   }
 
   render() {
+    console.log(this.state.movieDetail);
+    
     // const isloading = this.state.isLoading;
     const ur = "https://image.tmdb.org/t/p/w300/";
 
@@ -51,11 +59,12 @@ class Detail extends React.Component {
         <div className="backLink">
           <Link to="/movie/">back to movie list</Link>
         </div>
-        <div className="info">
+        <div className="info" >
           {this.state.movieDetail && (
-            <>
-              <div className="detail">
-                {" "}
+            <div style={{backgroundImage:`url(${ur}${this.state.movieDetail.background})`
+             ,backgroundPosition:"center" ,width:"100%",height:"100%",backgroundSize:"cover"}}>
+            {" "}
+              <div className="detail" >
                 <span className="subtitle">Title</span> :
                 {this.state.movieDetail.title}
               </div>
@@ -93,9 +102,10 @@ class Detail extends React.Component {
                   backgroundImage: `url(${this.state.movieDetail.poster_path})`,
                 }}
               ></div> */}
-            </>
+            </div>
           )}
         </div>
+        <Showmovie data={this.state.movieDetail}></Showmovie>
       </div>
     );
   }
