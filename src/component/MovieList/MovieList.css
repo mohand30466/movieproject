@@ -4,15 +4,15 @@
 
   min-height: 80vh;
   max-width: 100vw;
-  background-color: rgba(126, 68, 128, 0.39);
+  /* background-color: rgba(126, 68, 128, 0.39); */
   margin: 0 auto;
 }
 .card {
   position: relative;
   width: 12rem;
   height: 20rem;
-  border: solid 10px var(--trateryColor);
-  border-radius: 5%;
+  /* border: solid 10px var(--trateryColor); */
+  /* border-radius: 5%; */
   margin: 0.7rem;
   margin-top: 5rem;
 

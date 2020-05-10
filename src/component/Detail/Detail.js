@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import { fetchMovieWithId } from "../../Api/Api";
 import { omdbmoviesdata } from "../../Api/Api.js";
-import Showmovie from "../Showmovie/Showmovie"
+import { fetchtrailers } from "../../Api/Api";
+import Showmovie from "../Showmovie/Showmovie";
 
 import "./Detail.css";
 import {
@@ -15,7 +16,7 @@ import {
 } from "react-router-dom";
 
 class Detail extends React.Component {
-  state = { movieDetail: null, isLoading: false };
+  state = { movieDetail: null, isLoading: false, vedioId: [] };
 
   async componentDidMount() {
     const obj = {};
@@ -32,19 +33,24 @@ class Detail extends React.Component {
     obj.year = tmdbdata.release_date.slice(0, 4);
     obj.type = omdbdata.Genre;
     obj.writer = omdbdata.Writer;
-    obj.background = tmdbdata.backdrop_path
-    obj.poster = tmdbdata.poster_path
-    // obj.poster_path =omdbdata
-
+    obj.background = tmdbdata.backdrop_path;
+    obj.poster = tmdbdata.poster_path;
+    obj.id = tmdbdata.imdb_id;
+    console.log("id", obj.vedioid);
+    const vedioId = await fetchtrailers(id);
+    console.log("this is the data I get", vedioId);
+    if (vedioId.results.length > 0) {
+      obj.vedioPlayerId = vedioId.results[0].key;
+    }
     this.setState({ movieDetail: obj });
-    console.log(tmdbdata);
-    console.log(omdbdata);
-    
+    // console.log(tmdbdata);
+    // console.log(omdbdata);
+    // console.log(this.state.vedioId.results[0].id);
   }
 
   render() {
     console.log(this.state.movieDetail);
-    
+
     // const isloading = this.state.isLoading;
     const ur = "https://image.tmdb.org/t/p/w300/";
 
@@ -59,12 +65,19 @@ class Detail extends React.Component {
         <div className="backLink">
           <Link to="/movie/">back to movie list</Link>
         </div>
-        <div className="info" >
+        <div className="info">
           {this.state.movieDetail && (
-            <div style={{backgroundImage:`url(${ur}${this.state.movieDetail.background})`
-             ,backgroundPosition:"center" ,width:"100%",height:"100%",backgroundSize:"cover"}}>
-            {" "}
-              <div className="detail" >
+            <div
+              style={{
+                backgroundImage: `url(${ur}${this.state.movieDetail.background})`,
+                backgroundPosition: "center",
+                width: "100%",
+                height: "100%",
+                backgroundSize: "cover",
+              }}
+            >
+              {" "}
+              <div className="detail">
                 <span className="subtitle">Title</span> :
                 {this.state.movieDetail.title}
               </div>
@@ -72,7 +85,6 @@ class Detail extends React.Component {
                 <span className="subtitle">Year</span> :
                 {this.state.movieDetail.year}
               </div>
-
               <div className="detail">
                 <span className="subtitle">Runtime :</span>{" "}
                 {this.state.movieDetail.runtime} minutes

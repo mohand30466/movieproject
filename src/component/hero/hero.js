@@ -100,7 +100,12 @@ class Hero extends React.Component {
             })}
           </Slider>
           <div>
-            <h1>Wellcome to Movie App</h1>
+            <h1>Welcome to Movie App</h1>
+            <p>find your movie and enjoy it</p>
+          </div>
+          <div>
+            <div>LatestMovie</div>
+            <div>topMovie</div>
           </div>
         </div>
       </div>

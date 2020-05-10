@@ -24,11 +24,11 @@ const Navbar = () => {
     //   url: "/contact",
     //   key: 3,
     // },
-    {
-      title: "Movie",
-      url: "/movie/",
-      key: 4,
-    },
+    // {
+    //   title: "Movie",
+    //   url: "/movie/",
+    //   key: 4,
+    // },
    
   ];
 

@@ -1,12 +1,14 @@
 import React from "react";
 import { tmdbNewestMovies } from "../../Api/Api.js";
+import {latestMovie} from '../../Api/Api'
 import "./MovieList.css";
 import Pagination from "../pagination/Pagination";
 import Card from "../Card/Card";
+import Latestmovie from '../latestmovie/Latestmovie'
 
 class MovieList extends React.Component {
   state = {
-    
+    latestMovie:[],
     data: [],
     term: " ",
     isLoading: false,
@@ -17,9 +19,10 @@ class MovieList extends React.Component {
   async componentDidMount() {
     this.setState({ isLoading: true });
     const data = await tmdbNewestMovies();
+    const lmovie = await latestMovie()
     // const dbImg= await tmdbimages();
 
-    this.setState({ data: data.results });
+    this.setState({ data: data.results,latestMovie: lmovie});
     this.setState({ isLoading: false });
   }
 
@@ -45,6 +48,7 @@ class MovieList extends React.Component {
       <div>
         <div className="movieContainer">
           {isloading && <h1>please wait isLoading...</h1>}
+          {/* <Latestmovie data={this.state.latestMovie}/> */}
 
           <Card
             data={currentpost}

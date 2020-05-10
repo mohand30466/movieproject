@@ -4,7 +4,7 @@ import MovieList from "./component/MovieList/MovieList";
 import Hero from "./component/hero/hero";
 import Detail from "./component/Detail/Detail";
 import Contact from "./component/contact/contact";
-import SearchResult from "./component/SearchResult/SearchResult";
+// import SearchResult from "./component/SearchResult/SearchResult";
 // import SearchBar from './component/SearchBar/SearchBar'
 
 import "./App.css";

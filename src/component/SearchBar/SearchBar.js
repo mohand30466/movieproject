@@ -5,13 +5,20 @@ import Display from '../Display/display'
 
 class SearchBar extends React.Component {
   state = { term: " ", data: [] };
+  // if(this.state.term == ""){
+  //   return(
+  //     <div>enter something to search</div>
+  //   )
+  // }
 
   onClickHandler = async () => {
     //this prevented the default behaviour of the button on a form. Prevents the behaviour orefreshing the page.
     //But you really dont need a form element here. So you can just use a input without wrapped in a form. Then we dont need this preventdefault re because it is not wrapped inside a form.
     // e.preventDefault();
+    
     const data = await searchMovie(this.state.term);
     this.setState({ data: data.results });
+  
     
   };
 

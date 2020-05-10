@@ -1,0 +1,12 @@
+.playerContainer{
+    position: relative;
+}
+.vedioPlayer{
+    position: absolute;
+    top: 9rem;
+    right:58rem;
+    width: 19rem;
+    height: 12rem;
+   
+
+}
