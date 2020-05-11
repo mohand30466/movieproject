@@ -24,6 +24,7 @@
     margin: auto;
     border-radius: 2%;
 }
+
 .subtitle{
     font-size: 1.2rem;
     
@@ -36,4 +37,18 @@
     background-color: blueviolet;
     top: 0;
     left: -15rem;
+}
+@media only screen and (max-width: 600px) {
+
+    .info{
+        position: relative;
+        
+        width: 59%;
+        height: 75%;
+        background-color: rgba(29, 21, 36, 0.247);
+        margin: auto;
+        border-radius: 2%;
+        margin-top: 2.5rem;
+    }
+
 }

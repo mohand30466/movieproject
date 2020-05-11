@@ -57,14 +57,14 @@ class Hero extends React.Component {
 
     return (
       <div className="heroContainer">
-        <div className="hero-line" style={{ padding: 50 , width: 600}}>
+        <div className="hero-line" >
           <Slider {...setting}>
             {cards.map((el) => {
               const id = el.id;
 
               return (
                 <div className ="Link">
-                {/* <Link  to={"/movie/" + id}> */}
+                <Link  to={"/movie/" + id}>
                   <div
                     className="cards"
                     style={{
@@ -94,7 +94,7 @@ class Hero extends React.Component {
 
                       </div>
                   </div>
-                {/* </Link> */}
+                </Link>
                 </div>
               );
             })}
@@ -103,10 +103,10 @@ class Hero extends React.Component {
             <h1>Welcome to Movie App</h1>
             <p>find your movie and enjoy it</p>
           </div>
-          <div>
+          {/* <div>
             <div>LatestMovie</div>
             <div>topMovie</div>
-          </div>
+          </div> */}
         </div>
       </div>
     );

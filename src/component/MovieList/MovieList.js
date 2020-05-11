@@ -5,6 +5,7 @@ import "./MovieList.css";
 import Pagination from "../pagination/Pagination";
 import Card from "../Card/Card";
 import Latestmovie from '../latestmovie/Latestmovie'
+import { Link } from "react-router-dom";
 
 class MovieList extends React.Component {
   state = {
@@ -27,6 +28,7 @@ class MovieList extends React.Component {
   }
 
   render() {
+    const id = this.state.data.id
     const isloading = this.state.isLoading;
 
     const index0flastpage = this.state.curentPage * this.state.postperPage;
@@ -46,6 +48,15 @@ class MovieList extends React.Component {
 
     return (
       <div>
+        <Latestmovie/>
+        <div className="movie-link">
+          <Link className="link" to={"/movie/" + id}>
+          <div >LatestMovie</div>
+          </Link>
+          <Link className="link" to={"/movie/" + id}>
+          <div >TopMovie</div>
+          </Link>
+        </div>
         <div className="movieContainer">
           {isloading && <h1>please wait isLoading...</h1>}
           {/* <Latestmovie data={this.state.latestMovie}/> */}

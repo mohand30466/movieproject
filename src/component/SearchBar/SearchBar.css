@@ -12,3 +12,13 @@
     border-radius: 2%;
     margin-bottom: 50%;
 }
+@media only screen and (max-width: 600px) {
+    .input{
+        float: right;
+        height: rem;
+        width: 14rem;
+        border-radius: 2%;
+        margin-bottom: 50%;
+    }
+    
+}

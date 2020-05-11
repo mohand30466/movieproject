@@ -9,8 +9,8 @@ const VedioPlayer = ({ vedio }) => {
   }
 
   const opts = {
-    height: "390",
-    width: "640",
+    height: "200",
+    width: "300",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -18,7 +18,9 @@ const VedioPlayer = ({ vedio }) => {
   };
   return (
     <div className="playerContainer">
+      <div className="play">
       <YouTube videoId={vedio} opts={opts} />;
+      </div>
     </div>
   );
 };

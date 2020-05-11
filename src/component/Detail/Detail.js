@@ -63,7 +63,7 @@ class Detail extends React.Component {
         )} */}
 
         <div className="backLink">
-          <Link to="/movie/">back to movie list</Link>
+          <Link to="/movie/">back</Link>
         </div>
         <div className="info">
           {this.state.movieDetail && (
