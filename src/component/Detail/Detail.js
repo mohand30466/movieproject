@@ -36,9 +36,9 @@ class Detail extends React.Component {
     obj.background = tmdbdata.backdrop_path;
     obj.poster = tmdbdata.poster_path;
     obj.id = tmdbdata.imdb_id;
-    console.log("id", obj.vedioid);
+    // console.log("id", obj.vedioid);
     const vedioId = await fetchtrailers(id);
-    console.log("this is the data I get", vedioId);
+    // console.log("this is the data I get", vedioId);
     if (vedioId.results.length > 0) {
       obj.vedioPlayerId = vedioId.results[0].key;
     }
@@ -49,7 +49,7 @@ class Detail extends React.Component {
   }
 
   render() {
-    console.log(this.state.movieDetail);
+    // console.log(this.state.movieDetail);
 
     // const isloading = this.state.isLoading;
     const ur = "https://image.tmdb.org/t/p/w300/";

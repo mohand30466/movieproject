@@ -50,8 +50,11 @@ export const fetchtrailers = async (movie_id) => {
 
 export const latestMovie = async () => {
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/latest?api_key=${KEY}&language=en-US`
-    
+   
+
+    `https://api.themoviedb.org/3/discover/movie?api_key=${KEY}&primary_release_year=2020&sort_by=vote_average.desc&language=en-US&include_adult=false&include_video=false&page=1&release_date.gte=2020&year=2020&vote_average.gte=4&vote_average.lte=5`
+
+
   );
   const latestdata = await response.json();
   console.log(latestdata);

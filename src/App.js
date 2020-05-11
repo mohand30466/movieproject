@@ -6,6 +6,8 @@ import Detail from "./component/Detail/Detail";
 import Contact from "./component/contact/contact";
 // import SearchResult from "./component/SearchResult/SearchResult";
 // import SearchBar from './component/SearchBar/SearchBar'
+import Latestmovie from './component/latestmovie/Latestmovie'
+
 
 import "./App.css";
 import {
@@ -28,9 +30,9 @@ const App = () => {
             <MovieList />
           </Route>
 
-          {/* <Route exact path="/search">
-            <SearchResult />
-          </Route> */}
+          <Route exact path="/latest">
+          <Latestmovie/>
+          </Route>
 
           <Route exact path="/about">
             <Hero />

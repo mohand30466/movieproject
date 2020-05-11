@@ -1,2 +1,6 @@
 /* @import '../Style/base.css';
 @import '../Style/cssvariable.css'; */
+body{
+    margin: 0;
+    padding: 0;
+}

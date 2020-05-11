@@ -8,15 +8,13 @@
     width: 19rem;
     height: 12rem;
    
+
 }
 @media only screen and (max-width: 600px) {
     .playerContainer{
         position: absolute;
-        top: 33rem;
-        left:-2.3rem;
-        width: 8rem;
-        height: 5rem;
-       
+        top: 30rem;
+        left: .7rem;
     }
 
 }

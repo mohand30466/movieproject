@@ -4,7 +4,6 @@ import {latestMovie} from '../../Api/Api'
 import "./MovieList.css";
 import Pagination from "../pagination/Pagination";
 import Card from "../Card/Card";
-import Latestmovie from '../latestmovie/Latestmovie'
 import { Link } from "react-router-dom";
 
 class MovieList extends React.Component {
@@ -48,13 +47,13 @@ class MovieList extends React.Component {
 
     return (
       <div>
-        <Latestmovie/>
+       
         <div className="movie-link">
-          <Link className="link" to={"/movie/" + id}>
-          <div >LatestMovie</div>
+          <Link  to={"/latest/"}>
+          <div className="link"  >LatestMovie</div>
           </Link>
-          <Link className="link" to={"/movie/" + id}>
-          <div >TopMovie</div>
+          <Link  to={"/latest/"}>
+          <div className="link" >TopMovie</div>
           </Link>
         </div>
         <div className="movieContainer">

@@ -18,9 +18,9 @@ const VedioPlayer = ({ vedio }) => {
   };
   return (
     <div className="playerContainer">
-      <div className="play">
+      
       <YouTube videoId={vedio} opts={opts} />;
-      </div>
+     
     </div>
   );
 };
