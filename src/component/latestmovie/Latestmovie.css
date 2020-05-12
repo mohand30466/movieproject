@@ -1,7 +1,45 @@
 .latest-title{
     margin-left: 45%;
-    /* border: 1px solid; */
     width: 8rem;
     font-size: 1.5rem;
+    margin-top: 1rem;
+
+}
+.card-latest{
+    position: relative;
+    width: 12rem;
+    height: 20rem;
+
+    margin: 0.7rem;
+    margin-top: 2rem;
+  
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+   
+}
+.card-latest:hover{
+ 
+        transform: scale(.9);
+  
+}
+@media only screen and (max-width: 600px){
+    .card-latest{
+        position: relative;
+        width: 12rem;
+        height: 20rem;
+    
+        margin: -2.3rem;
+        margin-top: 3rem;
+        margin-right: 2rem;
+        border:rgb(5, 5, 71) solid 2px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+       
+    }
+    .latest-title{
+        margin-left: 30%;
+        width: 8rem;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    
+    }
 
 }

@@ -49,13 +49,14 @@ class MovieList extends React.Component {
       <div>
        
         <div className="movie-link">
-          <Link  to={"/latest/"}>
-          <div className="link"  >LatestMovie</div>
+          <Link  className="link" to={"/latest/"}>
+          <div  >LatestMovie</div>
           </Link>
-          <Link  to={"/latest/"}>
-          <div className="link" >TopMovie</div>
+          <Link className="link"   to={"/latest/"}>
+          <div >TopMovie</div>
           </Link>
         </div>
+        
         <div className="movieContainer">
           {isloading && <h1>please wait isLoading...</h1>}
           {/* <Latestmovie data={this.state.latestMovie}/> */}

@@ -5,36 +5,29 @@ import React from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
 
-
 const Card = ({ data }) => {
   // console.log(odata);
-  
-  const url = "https://image.tmdb.org/t/p/w300/"
+
+  const url = "https://image.tmdb.org/t/p/w300/";
 
   return (
-    
     <div className="main-card">
-      
       {data.map((movie) => {
         const id = movie.id;
-       
-       
+
         return (
-          
           <div key={movie.id}>
-            <Link to={"/movie/" + id}>
+            <Link className="card-link" to={"/movie/" + id}>
               <div
-                className="card"
+                className="card-card"
                 style={{
                   backgroundImage: `url(${url}${movie.poster_path})`,
-                  backgroundSize:'cover',
+                  backgroundSize: "cover",
                 }}
                 key={movie.id}
               >
-                <div className="title">{" "}{movie.title}</div>
-                <div className="year">
-                
-                  {movie.release_date.slice(0, 4)}</div>
+                <div className="title"> {movie.title}</div>
+                <div className="year">{movie.release_date.slice(0, 4)}</div>
                 <div className="rating">
                   <div>
                     <img

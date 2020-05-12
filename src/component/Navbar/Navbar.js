@@ -34,8 +34,7 @@ const Navbar = () => {
 
   return (
     <div className="navContainer">
-     
-      
+  
       {links.map((link) => {
         return (
          

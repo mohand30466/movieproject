@@ -37,7 +37,7 @@ class Latestmovie extends React.Component  {
           <div key={movie.id}>
             <Link to={"/movie/" + id}>
               <div
-                className="card"
+                className="card-latest"
                 style={{
                   backgroundImage: `url(${url}${movie.poster_path})`,
                   backgroundSize:'cover',

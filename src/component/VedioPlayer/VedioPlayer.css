@@ -1,20 +1,24 @@
-.playerContainer{
-    position: relative;
+.playerContainer {
+  position: relative;
 }
-.vedioPlayer{
-    position: absolute;
-    top: 9rem;
-    right:58rem;
-    width: 19rem;
-    height: 12rem;
-   
-
+.vedioPlayer {
+  position: absolute;
+  top: 9rem;
+  right: 58rem;
+  width: 19rem;
+  height: 12rem;
 }
 @media only screen and (max-width: 600px) {
-    .playerContainer{
-        position: absolute;
-        top: 30rem;
-        left: .7rem;
-    }
-
+  .playerContainer {
+    position: absolute;
+    top: 35.4rem;
+    left: 0.7rem;
+  }
+  .vedioPlayer {
+    position: absolute;
+    top: 9rem;
+    right: 58rem;
+    width: 20rem;
+    height: 15rem;
+  }
 }
