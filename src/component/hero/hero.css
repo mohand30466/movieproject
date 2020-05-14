@@ -1,6 +1,6 @@
 .heroContainer {
   text-align: center;
-  
+
   /* color: red; */
   height: 100vh;
   /* background-image: url("https://images.unsplash.com/photo-1523821741446-edb2b68bb7a0?ixlib=rb-1.2.1&w=1000&q=80"); */
@@ -10,7 +10,6 @@
 }
 .hero-line-logo {
   height: 40vmin;
-  
 }
 .hero-line {
   display: inline-block;
@@ -18,14 +17,12 @@
   cursor: none;
   padding: 50px;
   width: 600px;
-
 }
 .hero-line-header {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-items: center;
-  
 
   flex-direction: column;
 
@@ -69,20 +66,19 @@
   left: -469px;
   /* background-color: var(--seconderyColor); */
   border-radius: 2px;
-  
 }
 .ratings {
   font-size: 1.5rem;
   font-family: monospace;
   position: absolute;
   color: rgb(156, 23, 23);
-   bottom: 0;
+  bottom: 0;
   /* background-color: var(--seconderyColor); */
   right: 12px;
   border-radius: 2px;
 }
 
-.details{
+.details {
   position: absolute;
 
   height: 25%;
@@ -91,53 +87,46 @@
   color: white;
   bottom: 0;
 }
-.btn{
+.btn {
   position: absolute;
 
   height: 1rem;
   width: 2.5rem;
   left: -248px;
   bottom: 1rem;
-
 }
 
 @media only screen and (max-width: 600px) {
-
   .hero-line {
     display: inline-block;
     text-align: center;
     cursor: none;
     padding: 0px;
     width: 200px;
-  
   }
-.cards {
-  position: relative;
-  width: 13rem;
-  height: 22rem;
-  /* border: solid 10px var(--trateryColor); */
-  /* border-radius: 5%; */
-  margin: auto;
+  .cards {
+    position: relative;
+    width: 13rem;
+    height: 22rem;
+    /* border: solid 10px var(--trateryColor); */
+    /* border-radius: 5%; */
+    margin: auto;
 
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  cursor: pointer;
-}
-.btn{
-  position: absolute;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    cursor: pointer;
+  }
+  /* .btn {
+    position: absolute;
 
-  height: 1rem;
-  width: 2.5rem;
-  left: -248px;
-  bottom: 200rem;
+    height: 1rem;
+    width: 2.5rem;
+    left: -248px;
+    bottom: 200rem;
+  } */
+  .heroContainer {
+    text-align: center;
 
-}
-.heroContainer {
-  text-align: center;
-  
- margin-top: 1rem;
-  height: 100vh;
- 
-
-}
-
+    margin-top: 1rem;
+    height: 100vh;
+  }
 }
