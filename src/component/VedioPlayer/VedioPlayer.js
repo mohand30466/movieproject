@@ -3,7 +3,7 @@ import "./VedioPlayer.css";
 import YouTube from "react-youtube";
 
 const VedioPlayer = ({ vedio }) => {
-  console.log(vedio);
+  // console.log(vedio);
   if (!vedio) {
     return <div>loding...</div>;
   }

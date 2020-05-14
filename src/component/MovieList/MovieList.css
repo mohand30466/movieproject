@@ -7,13 +7,15 @@
   justify-content: center;
   min-height: 80vh;
   width: 100vw;
-  /* background-color: rgba(126, 68, 128, 0.39); */
   margin: 0 auto;
+  margin-top: 2rem;
 }
 .movie-link{
   display: flex;
   justify-content: center;
   justify-items: center;
+  margin-top: -7rem;
+
 }
 .link{
   
@@ -77,8 +79,7 @@
 
 @media only screen and (max-width: 600px) {
   .movie-link{
-    margin-top: -9rem;
-
+    margin-top: -15rem;
     margin-left: 0rem;
   }
 
@@ -86,11 +87,19 @@
     position: relative;
     width: 12rem;
     height: 20rem;
-    margin: -17%;
-    margin-top: 3rem;
-    margin-right: 0rem;
+    /* margin: -17%; */
+    margin-top: 1rem;
+    margin-right: 7rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
    
+  }
+  .movieContainer {
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+    width: 100vw;
+    margin: 0 auto;
+    margin-top: 12rem;
   }
   
 

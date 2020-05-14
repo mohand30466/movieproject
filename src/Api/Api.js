@@ -15,7 +15,7 @@ export const fetchMovieWithId = async (id) => {
     `https://api.themoviedb.org/3/movie/${id}?api_key=${KEY}&language=en-US`
   );
   const data = await response.json();
-  console.log(data);
+  // console.log(data);
   return data;
 };
 
@@ -33,7 +33,7 @@ export const searchMovie = async (term) => {
     `https://api.themoviedb.org/3/search/movie?api_key=${KEY}&query=${term}`
   );
   const dbImg = await response.json();
-  console.log(dbImg);
+  // console.log(dbImg);
 
   return dbImg;
 };
@@ -57,7 +57,7 @@ export const latestMovie = async () => {
 
   );
   const latestdata = await response.json();
-  console.log(latestdata);
+  // console.log(latestdata);
 
   return latestdata;
 };
