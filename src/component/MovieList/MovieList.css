@@ -1,12 +1,12 @@
 
 .main{
-  width: 100vw;
+
 }
 .movieContainer {
   display: flex;
   justify-content: center;
   min-height: 80vh;
-  width: 100vw;
+ 
   margin: 0 auto;
   margin-top: 2rem;
 }
@@ -99,7 +99,7 @@
     display: flex;
     justify-content: center;
     min-height: 80vh;
-    width: 100vw;
+ 
     margin: 0 auto;
     margin-top: 8rem;
   }
