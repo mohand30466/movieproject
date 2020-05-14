@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Display = ({ data }) => {
   if(!data){
-    return <div className="search">please enter title to search</div>
+    return <div className="search">please enter movie title</div>
   }
   const url = "https://image.tmdb.org/t/p/w300/";
   const results = data.slice(0,5)

@@ -19,11 +19,13 @@
 }
 .link{
   
-  width: 8rem;
+  width: 20rem;
   margin: 2%;
-  border: 1px solid blue;
+  border-radius: 50%;
+  /* border: 1px solid blue; */
   text-align: center;
   padding: 6px;
+  background-color: rgb(20, 21, 26);
 }
   
 .link:hover{
@@ -79,7 +81,7 @@
 
 @media only screen and (max-width: 600px) {
   .movie-link{
-    margin-top: -15rem;
+    margin-top: -10rem;
     margin-left: 0rem;
   }
 
@@ -99,7 +101,7 @@
     min-height: 80vh;
     width: 100vw;
     margin: 0 auto;
-    margin-top: 12rem;
+    margin-top: 8rem;
   }
   
 

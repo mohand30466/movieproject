@@ -1,12 +1,12 @@
 .navContainer {
   position: relative;
   display: flex;
+  flex-wrap: nowrap; 
   justify-content: space-around;
   justify-items: center;
   padding-top: 1rem;
   text-align: center;
   height: 2.5rem;
- 
   width: 100vw;
   color: var(--textColor);
   /* border: red 2px solid; */
