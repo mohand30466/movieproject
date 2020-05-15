@@ -1,9 +1,9 @@
-/* .latest-title{
+.latest-title{
     margin-left: 45%;
     font-size: 1.5rem;
     margin-top: 1rem;
 
-} */
+}
 .main-card {
   display: flex;
   flex-wrap: wrap;

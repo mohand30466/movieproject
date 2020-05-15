@@ -11,6 +11,8 @@ const Card = ({ data }) => {
   const url = "https://image.tmdb.org/t/p/w300/";
 
   return (
+   
+
     <div className="main-card">
       {data.map((movie) => {
         const id = movie.id;

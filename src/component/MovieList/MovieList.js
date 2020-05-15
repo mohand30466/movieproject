@@ -50,10 +50,10 @@ class MovieList extends React.Component {
        
         <div className="movie-link">
           <Link  className="link" to={"/latest/"}>
-          <div  >LatestMovie</div>
+          <div  >Latest Movie</div>
           </Link>
-          <Link className="link"   to={"/latest/"}>
-          <div >TopMovie</div>
+          <Link className="link"   to={"/toprating/"}>
+          <div >Top Rating</div>
           </Link>
         </div>
         

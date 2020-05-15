@@ -5,11 +5,8 @@ import Display from '../Display/display'
 
 class SearchBar extends React.Component {
   state = { term: " ", data: [] };
-  // if(this.state.term == ""){
-  //   return(
-  //     <div>enter something to search</div>
-  //   )
-  // }
+  
+  
 
   onClickHandler = async () => {
     //this prevented the default behaviour of the button on a form. Prevents the behaviour orefreshing the page.

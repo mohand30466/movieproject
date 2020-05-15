@@ -5,7 +5,7 @@ import YouTube from "react-youtube";
 const VedioPlayer = ({ vedio }) => {
   // console.log(vedio);
   if (!vedio) {
-    return <div>loding...</div>;
+    return <div></div>;
   }
 
   const opts = {

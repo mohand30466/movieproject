@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {latestMovie} from '../../Api/Api'
-import './Latestmovie.css'
+import {topRating} from '../../Api/Api'
+import './TopRating.css'
 
 class Latestmovie extends React.Component  {
   state ={data:[]}
 
   async componentDidMount(){
-    const moviedata = await latestMovie()    
+    const moviedata = await topRating()    
     this.setState({data: moviedata.results})
     
 
@@ -25,9 +25,8 @@ class Latestmovie extends React.Component  {
  
   return (
     <div>
-      <Link to ="/">back to home</Link>
-
-      <div className="latest-title">Latest Movie</div>
+        <Link to ="/">back to home</Link>
+      <div className="latest-title">TopRating</div>
       <div className="main-card">
       
       {this.state.data.map((movie) => {
@@ -38,6 +37,7 @@ class Latestmovie extends React.Component  {
           
           <div key={movie.id}>
             <Link to={"/movie/" + id}>
+                
               <div
                 className="card-latest"
                 style={{

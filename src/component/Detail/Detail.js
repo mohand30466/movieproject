@@ -64,6 +64,12 @@ class Detail extends React.Component {
 
         <div className="backLink">
           <Link to="/movie/">back</Link>
+          <br/>
+          <Link to="/toprating/">Top Rating</Link>
+          <br/>
+          <Link to="/latest/">latest Movie</Link>
+
+
         </div>
         <div className="info">
           {this.state.movieDetail && (

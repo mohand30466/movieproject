@@ -7,6 +7,8 @@ import Contact from "./component/contact/contact";
 // import SearchResult from "./component/SearchResult/SearchResult";
 // import SearchBar from './component/SearchBar/SearchBar'
 import Latestmovie from './component/latestmovie/Latestmovie'
+import TopRating from './component/TopRating/TopRating'
+
 
 
 import "./App.css";
@@ -17,6 +19,7 @@ import {
   Link,
   BrowserRouter,
 } from "react-router-dom";
+import { topRating } from "./Api/Api";
 
 const App = () => {
   return (
@@ -44,9 +47,9 @@ const App = () => {
           <Route exact path="/movie/">
             <MovieList />
           </Route>
-          {/* <Route exact path="/contact">
-            <Contact> </Contact>
-          </Route> */}
+          <Route exact path="/toprating">
+            <TopRating/>
+          </Route>
         </Switch>
       </div>
     </BrowserRouter>
