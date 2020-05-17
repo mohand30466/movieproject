@@ -63,11 +63,11 @@ class Detail extends React.Component {
         )} */}
 
         <div className="backLink">
-          <Link to="/movie/">back</Link>
+          <Link to="/movie/">Back to movies</Link>
           <br/>
           <Link to="/toprating/">Top Rating</Link>
           <br/>
-          <Link to="/latest/">latest Movie</Link>
+          <Link to="/latest/">Latest</Link>
 
 
         </div>

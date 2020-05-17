@@ -33,12 +33,10 @@
 .cards {
   position: relative;
   width: 32rem;
-  height: 20rem;
-  /* border: solid 10px var(--trateryColor); */
-  /* border-radius: 5%; */
+  height: 22rem;
   margin: auto;
-
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+ 
   cursor: pointer;
 }
 .slide .slick-prev,

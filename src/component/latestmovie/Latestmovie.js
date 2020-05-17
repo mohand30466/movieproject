@@ -65,7 +65,7 @@ class Latestmovie extends React.Component  {
         );
       })}
     </div>
-  );
+ 
     </div>
   );
    }

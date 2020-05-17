@@ -70,6 +70,7 @@ class Hero extends React.Component {
                     style={{
                       backgroundImage: `url(https://image.tmdb.org/t/p/w300/${el.poster_path})`,
                       backgroundSize: "cover",
+                     
                     }}
                     key={el.id}
                   >

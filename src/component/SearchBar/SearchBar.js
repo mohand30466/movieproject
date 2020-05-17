@@ -18,6 +18,7 @@ class SearchBar extends React.Component {
   
     
   };
+ 
 
   render() {
     console.log(this.state.data);
@@ -39,7 +40,7 @@ class SearchBar extends React.Component {
         </div>
         
       </div>
-      <Display data={this.state.data}/>
+      <Display data={this.state.data} handelclick={(e)=>this.setState({data:"",term:""})}/>
       </>
     );
      

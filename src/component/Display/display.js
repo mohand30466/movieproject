@@ -5,13 +5,21 @@ import { Link } from "react-router-dom";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
-const Display = ({ data }) => {
+const Display = ({ data, handelclick }) => {
   if (!data) {
-    return <div className="search"></div>;
+    return <div className="search"> </div>;
   }
+
+
+
  
   const url = "https://image.tmdb.org/t/p/w300/";
-  const results = data.slice(0, 5);
+  const results = data.slice(0, 4);
+
+  // const handelclick =()=>{
+  //   // results = {...results}.filter((el)=>el.id == results.id)
+     
+  //  }
 
   return (
     <div className="main-container">
@@ -20,8 +28,8 @@ const Display = ({ data }) => {
           const id = movie.id;
 
           return (
-            <div key={movie.id}>
-              <Link className="cardd" to={"/movie/" + id}>
+            <div onClick={handelclick} key={movie.id}>
+              <Link className="cardd" to={"/movie/" + id} >
                 <img src={`${url}${movie.poster_path}`} />
                 <div style={{ marginLeft: "10px" }}>
                   <div className="titled"> {movie.title.slice(0, 12)}</div>
