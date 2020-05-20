@@ -10,16 +10,9 @@ const Display = ({ data, handelclick }) => {
     return <div className="search"> </div>;
   }
 
-
-
- 
   const url = "https://image.tmdb.org/t/p/w300/";
   const results = data.slice(0, 4);
 
-  // const handelclick =()=>{
-  //   // results = {...results}.filter((el)=>el.id == results.id)
-     
-  //  }
 
   return (
     <div className="main-container">
@@ -29,7 +22,7 @@ const Display = ({ data, handelclick }) => {
 
           return (
             <div onClick={handelclick} key={movie.id}>
-              <Link className="cardd" to={"/movie/" + id} >
+              <div className="cardd">
                 <img src={`${url}${movie.poster_path}`} />
                 <div style={{ marginLeft: "10px" }}>
                   <div className="titled"> {movie.title.slice(0, 12)}</div>
@@ -43,7 +36,7 @@ const Display = ({ data, handelclick }) => {
                     {movie.vote_average}
                   </div>
                 </div>
-              </Link>
+              </div>
             </div>
           );
         })}

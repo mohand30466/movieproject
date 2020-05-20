@@ -38,7 +38,7 @@ class Detail extends React.Component {
     obj.id = tmdbdata.imdb_id;
     // console.log("id", obj.vedioid);
     const vedioId = await fetchtrailers(id);
-    // console.log("this is the data I get", vedioId);
+    console.log("this is the data I get", vedioId);
     if (vedioId.results.length > 0) {
       obj.vedioPlayerId = vedioId.results[0].key;
     }

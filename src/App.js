@@ -8,6 +8,7 @@ import Contact from "./component/contact/contact";
 // import SearchBar from './component/SearchBar/SearchBar'
 import Latestmovie from './component/latestmovie/Latestmovie'
 import TopRating from './component/TopRating/TopRating'
+import SearchResult from './component/SearchResult/SearchResult'
 
 
 
@@ -49,6 +50,10 @@ const App = () => {
           </Route>
           <Route exact path="/toprating">
             <TopRating/>
+          </Route>
+        
+        <Route exact path="/searchresult">
+            <SearchResult/>
           </Route>
         </Switch>
       </div>

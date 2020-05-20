@@ -2,25 +2,55 @@ import React, { Component } from "react";
 import "./SearchBar.css";
 import { searchMovie } from "../../Api/Api";
 import Display from '../Display/display'
+// import SearchResult from '../SearchResult/SearchResult'
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { Redirect } from "react-router-dom"
 
 class SearchBar extends React.Component {
-  state = { term: " ", data: [] };
+  // state = { term: " ", data: [] };
+  constructor(props){
+    super(props);
+      this.state = {
+        term: '',
+        data:[],
+        dataresult:[],
+        displaydata:[]
+      }
+  }
+
+  async componentDidMount(){
+    const moviedata = await searchMovie(this.state.term)    
+    this.setState({displaydata: moviedata.results})
+    
+  }
   
   
 
   onClickHandler = async () => {
-    //this prevented the default behaviour of the button on a form. Prevents the behaviour orefreshing the page.
-    //But you really dont need a form element here. So you can just use a input without wrapped in a form. Then we dont need this preventdefault re because it is not wrapped inside a form.
-    // e.preventDefault();
+   
     
     const data = await searchMovie(this.state.term);
-    this.setState({ data: data.results });
+    this.setState({ data: data.results ,term:""});
   
-    
+  };
+  handleKeyPress = (e) => {
+    let searchParam = e.target.value;
+    if (e.key === 'Enter'){
+      axios
+        .get(URL+searchParam)
+        .then((response) => {
+          this.setState({dataresult: response.data});
+        });
+    }
   };
  
 
   render() {
+   
+    console.log(this.state.term);
+
+    
     console.log(this.state.data);
     
 
@@ -35,12 +65,20 @@ class SearchBar extends React.Component {
           placeholder="Search"
           value={this.state.term}
           onChange={(e) => this.setState({ term: e.target.value })}
+          onKeyPress={this.handleKeyPress.bind(this)}
         />
         <button onClick={this.onClickHandler}>Submit</button>
         </div>
+        {this.state.data &&
+          <Redirect to={{
+            pathname: '/searchresult',
+            state: { dataresult: this.state.data }
+          }} />
+        }
         
       </div>
-      <Display data={this.state.data} handelclick={(e)=>this.setState({data:"",term:""})}/>
+      <Display data={this.state.data} handelclick={(e)=>this.setState({data:""})}/>
+      {/* <SearchResult data={this.state.data}/> */}
       </>
     );
      
