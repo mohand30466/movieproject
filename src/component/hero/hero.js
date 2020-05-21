@@ -1,13 +1,13 @@
 import React from "react";
 import "./hero.css";
-import Card from "../Card/Card";
 import { tmdbNewestMovies } from "../../Api/Api";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import {Redirect} from 'react-router-dom'
+// import { useParams } from "react-router-dom";
 // import { fetchMovieWithId } from "../../Api/Api";
 // import {
 //   BrowserRouter as Router,
@@ -61,7 +61,7 @@ class Hero extends React.Component {
           <Slider {...setting}>
             {cards.map((el) => {
               const id = el.id;
-
+             
               return (
                 <div className ="Link">
                 <Link  to={"/movie/" + id}>
@@ -100,6 +100,9 @@ class Hero extends React.Component {
               );
             })}
           </Slider>
+            <Redirect to={{
+                pathname: '/',
+              }} />
           <div>
             <h1>Welcome to Movie App</h1>
             <p>find your movie and enjoy it</p>

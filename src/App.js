@@ -9,6 +9,7 @@ import Contact from "./component/contact/contact";
 import Latestmovie from './component/latestmovie/Latestmovie'
 import TopRating from './component/TopRating/TopRating'
 import SearchResult from './component/SearchResult/SearchResult'
+import {Redirect} from  'react-router-dom'
 
 
 
@@ -27,8 +28,8 @@ const App = () => {
     <BrowserRouter>
       <div>
         <Navbar />
-        {/* <SearchBar/> */}
         <Switch>
+          {/* <Redirect from='' to='/' /> */}
           <Route exact path="/">
             <Hero />
             <MovieList />
