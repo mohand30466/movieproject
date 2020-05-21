@@ -77,7 +77,7 @@ class SearchBar extends React.Component {
         }
         
       </div>
-      <Display data={this.state.data} handelclick={(e)=>this.setState({data:""})}/>
+      {/* <Display data={this.state.data} handelclick={(e)=>this.setState({data:""})}/> */}
       {/* <SearchResult data={this.state.data}/> */}
       </>
     );
