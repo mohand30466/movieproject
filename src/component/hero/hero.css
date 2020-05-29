@@ -1,22 +1,18 @@
 .heroContainer {
   text-align: center;
-
   /* color: red; */
   height: 100vh;
-  /* background-image: url("https://images.unsplash.com/photo-1523821741446-edb2b68bb7a0?ixlib=rb-1.2.1&w=1000&q=80"); */
-  /* background-image: url("https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"); */
-  background-repeat: no-repeat;
-  background-size: cover;
+ 
 }
+
 .hero-line-logo {
   height: 40vmin;
 }
 .hero-line {
   display: inline-block;
   text-align: center;
-  cursor: none;
   padding: 50px;
-  width: 750px;
+  width: 950px;
 }
 .hero-line-header {
   display: flex;
@@ -32,16 +28,10 @@
 }
 .cards {
   position: relative;
-  width: 45rem;
-  height: 24.5rem;
-  /* background-size: cover;
-  -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
+  width: 55rem;
+  height: 29rem;
   margin: auto;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
- 
   cursor: pointer;
 }
 .slide .slick-prev,
@@ -66,7 +56,7 @@
   position: absolute;
   color: rgb(156, 23, 23);
   bottom: 0;
-  left: -669px;
+  left: -825px;
   /* background-color: var(--seconderyColor); */
   border-radius: 2px;
 }
@@ -85,7 +75,7 @@
   position: absolute;
 
   height: 25%;
-  width: 45rem;
+  width: 55rem;
   background-color: rgba(26, 25, 25, 0.199);
   color: white;
   bottom: 0;
@@ -95,7 +85,7 @@
 
   height: 1rem;
   width: 2.5rem;
-  left: -348px;
+  left: -448px;
   bottom: 1rem;
 }
 

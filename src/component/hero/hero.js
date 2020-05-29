@@ -7,15 +7,7 @@ import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import { Redirect } from "react-router-dom";
-// import { useParams } from "react-router-dom";
-// import { fetchMovieWithId } from "../../Api/Api";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link,
-//   BrowserRouter,
-// } from "react-router-dom";
+
 
 class Hero extends React.Component {
   state = {
@@ -32,11 +24,6 @@ class Hero extends React.Component {
     this.setState({ data: data.results });
     // console.log(data.results);
   }
-
-  // viewMovie(){
-  //   const url ="https://themoviedb.org/movie/"
-  //   window.location.href= url
-  // }
 
   render() {
     const setting = {
@@ -66,14 +53,18 @@ class Hero extends React.Component {
                   <Link to={"/movie/" + id}>
                     <div
                       className="cards"
-                      style={{
-                        backgroundImage: `url(https://image.tmdb.org/t/p/w200/${el.poster_path})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                      }}
+                      // style={{
+                      //   backgroundImage: `url(https://image.tmdb.org/t/p/w200/${el.poster_path})`,
+                      //   backgroundSize: "cover",
+                      //   backgroundPosition: "center",
+                      // }}
                       key={el.id}
                     >
-                      {/* <div className="title"> {el.title}</div> */}
+                        <img
+                              style={{  width: "55rem",
+                                height: "29rem" }}
+                              src={`https://image.tmdb.org/t/p/w200/${el.poster_path}`}
+                            />
 
                       <div className="details">
                         <div>{el.title}</div>
@@ -108,10 +99,10 @@ class Hero extends React.Component {
               pathname: "/",
             }}
           />
-          <div>
+           {/* <div>
             <h1>Welcome to Movie App</h1>
             <p>find your movie and enjoy it</p>
-          </div>
+          </div>  */}
          
         </div>
       </div>
