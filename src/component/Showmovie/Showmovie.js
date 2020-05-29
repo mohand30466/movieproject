@@ -16,7 +16,7 @@ const Showmovie = ({ data }) => {
           <button onClick={handelonClick}>Play</button>
         </div> */}
       </div>
-      <div>{data && <Vedioplayer vedio={data.vedioPlayerId} />}</div>
+      <div>{data && <Vedioplayer vedio={data.vedioPlayerId} actor={data}/>}</div>
     </>
   );
 };

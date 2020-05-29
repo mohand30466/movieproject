@@ -35,7 +35,6 @@ class Latestmovie extends React.Component  {
       <Link to ="/">back to home</Link>
 
       <div className="main-card">
-      
       {results.map((movie) => {
         const id = movie.id;
         if(!results){
