@@ -7,7 +7,7 @@ export const tmdbNewestMovies = async () => {
     `https://api.themoviedb.org/3/discover/movie?api_key=${KEY}&language=en-US&sort_by=first_air_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=20&release_date.gte=2020&vote_average.gte=4&vote_average.lte=7`
   );
   const data = await response.json();
-  console.log(data);
+  // console.log(data);
   
   return data;
 };
@@ -65,7 +65,7 @@ export const topRating = async () => {
     `https://api.themoviedb.org/3/discover/movie?api_key=${KEY}&primary_release_year=2020&sort_by=vote_average.desc&language=en-US&include_adult=false&include_video=false&page=3&vote_average.gte=4&vote_average.lte=9.5`
   );
   const topratingdata = await response.json();
-  console.log(topratingdata);
+  // console.log(topratingdata);
 
   return topratingdata;
 };
@@ -73,7 +73,7 @@ export const topRating = async () => {
 export const actors = async (id) =>{
   const response = await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${KEY}&language=en-US`);
   const data = await response.json();
-  console.log("this is actor data"+data);
+  // console.log("this is actor data"+data);
   
   return data
 }

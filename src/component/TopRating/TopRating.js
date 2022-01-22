@@ -1,73 +1,68 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {topRating} from '../../Api/Api'
-import './TopRating.css'
+import { topRating } from "../../Api/Api";
+import "./TopRating.css";
+import { Container } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar,faArrowCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
-class Latestmovie extends React.Component  {
-  state ={data:[]}
+class Latestmovie extends React.Component {
+  state = { data: [] };
 
-  async componentDidMount(){
-    const moviedata = await topRating()    
-    this.setState({data: moviedata.results})
-    
-
+  async componentDidMount() {
+    const moviedata = await topRating();
+    this.setState({ data: moviedata.results });
   }
- 
 
+  render() {
+    // console.log(this.state.data);
 
+    const url = "https://image.tmdb.org/t/p/w300/";
 
-  render(){
-    console.log(this.state.data);
+    return (
+      <Container> 
+        <div style={{textAlign:"center"}}>TOP RATING</div>
+        <Link style={{ marginLeft: "30", marginTop: "30" }} to="/">
+          <FontAwesomeIcon icon={faArrowCircleLeft} />
+        </Link>
 
-  
-  const url = "https://image.tmdb.org/t/p/w300/";
-
- 
-  return (
-    <div>
-        <Link to ="/">back to home</Link>
-      <div className="latest-title">TopRating</div>
       <div className="main-card">
-      
-      {this.state.data.map((movie) => {
-        const id = movie.id;
-       
-       
-        return (
-          
-          <div key={movie.id}>
-            <Link to={"/movie/" + id}>
-                
-              <div
-                className="card-latest"
-                style={{
-                  backgroundImage: `url(${url}${movie.poster_path})`,
-                  backgroundSize:'cover',
-                }}
-                key={movie.id}
-              >
-                <div className="title">{" "}{movie.title}</div>
-                <div className="year">
-                
-                  {movie.release_date.slice(0, 4)}</div>
-                <div className="rating">
-                  <div>
-                    <img
-                      style={{ width: "20px", height: "20px" }}
-                      src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/13575076871557740374-64.png"
-                    />
-                  </div>
-                  <div>{movie.vote_average}</div>
+        {this.state.data &&
+          this.state.data.map((movie) => {
+            const id = movie.id;
+            if (movie.poster_path) {
+              return (
+                <div className="cardPoster" key={movie.id}>
+                  <Link className="movieCardLink" to={"/movie/" + id}>
+                    <div
+                      className="backgroundMovieCard"
+                      style={{
+                        backgroundImage: `url(${url}${movie.poster_path})`,
+                        backgroundSize: "cover",
+                      }}
+                      key={movie.id}
+                    >
+                      
+                     
+                    
+                    </div>
+                    <div style={{color:"white", fontSize:"17px", textAlign:"center"}} >{movie.title.slice(0,30)}</div>
+                    <div className="movieinfo">
+                     <div >{movie.release_date.slice(0, 4)}</div>
+                      <div >
+                        <FontAwesomeIcon icon={faStar} />
+                        <span>{movie.vote_average}</span>
+                      </div>
+                        
+                      </div>
+                  </Link>
                 </div>
-              </div>
-            </Link>
-          </div>
-        );
-      })}
-    </div>
-  );
-    </div>
-  );
-   }
-};
+              );
+            }
+          })}
+      </div>
+      </Container>
+    );
+  }
+}
 export default Latestmovie;

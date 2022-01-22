@@ -1,24 +1,9 @@
-/* 
- .searchcontainer{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    height: 100vh;
-}  */
-.input{
-    float: right;
-    height: rem;
-    width: 20rem;
-    border-radius: 2%;
-    margin-bottom: 50%;
-}
-@media only screen and (max-width: 600px) {
-    .input{
-        float: right;
-        height: rem;
-        width: 14rem;
-        border-radius: 2%;
-        margin-bottom: 50%;
-    }
-    
+.searchBtn{
+    border: 3px solid thistle;
+    border-radius: 3px;
+    background-color: thistle;
+    color: gray;
+    font-family:'Times New Roman', Times, serif;
+    margin-left: 10px;
+
 }

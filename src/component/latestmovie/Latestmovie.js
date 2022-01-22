@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {latestMovie} from '../../Api/Api'
 import './Latestmovie.css'
+import { Container } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar,faArrowCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 class Latestmovie extends React.Component  {
   state ={data:[]}
@@ -24,49 +27,48 @@ class Latestmovie extends React.Component  {
 
  
   return (
-    <div>
-      <Link to ="/">back to home</Link>
+    <Container> 
+      <div style={{textAlign:"center"}}>LATEST MOVIE</div>
+      <Link style={{ marginLeft: "30", marginTop: "30" }} to="/">
+        <FontAwesomeIcon icon={faArrowCircleLeft} />
+      </Link>
 
-      <div className="latest-title">Latest Movie</div>
-      <div className="main-card">
-      
-      {this.state.data.map((movie) => {
-        const id = movie.id;
-       
-       
-        return (
-          
-          <div key={movie.id}>
-            <Link to={"/movie/" + id}>
-              <div
-                className="card-latest"
-                style={{
-                  backgroundImage: `url(${url}${movie.poster_path})`,
-                  backgroundSize:'cover',
-                }}
-                key={movie.id}
-              >
-                <div className="title">{" "}{movie.title}</div>
-                <div className="year">
-                
-                  {movie.release_date.slice(0, 4)}</div>
-                <div className="rating">
-                  <div>
-                    <img
-                      style={{ width: "20px", height: "20px" }}
-                      src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/13575076871557740374-64.png"
-                    />
+    <div className="main-card">
+      {this.state.data &&
+        this.state.data.map((movie) => {
+          const id = movie.id;
+          if (movie.poster_path) {
+            return (
+              <div className="cardPoster" key={movie.id}>
+                <Link className="movieCardLink" to={"/movie/" + id}>
+                  <div
+                    className="backgroundMovieCard"
+                    style={{
+                      backgroundImage: `url(${url}${movie.poster_path})`,
+                      backgroundSize: "cover",
+                    }}
+                    key={movie.id}
+                  >
+                    
+                   
+                  
                   </div>
-                  <div>{movie.vote_average}</div>
-                </div>
+                  <div style={{color:"white", fontSize:"17px", textAlign:"center"}} >{movie.title.slice(0,30)}</div>
+                  <div className="movieinfo">
+                   <div >{movie.release_date.slice(0, 4)}</div>
+                    <div >
+                      <FontAwesomeIcon icon={faStar} />
+                      <span>{movie.vote_average}</span>
+                    </div>
+                      
+                    </div>
+                </Link>
               </div>
-            </Link>
-          </div>
-        );
-      })}
+            );
+          }
+        })}
     </div>
- 
-    </div>
+    </Container>
   );
    }
 };

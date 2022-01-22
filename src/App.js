@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./component/Navbar/Navbar";
+import Header from "./component/Navbar/Navbar";
 import MovieList from "./component/MovieList/MovieList";
 import Hero from "./component/hero/hero";
 import Detail from "./component/Detail/Detail";
@@ -9,6 +9,7 @@ import Latestmovie from './component/latestmovie/Latestmovie'
 import TopRating from './component/TopRating/TopRating'
 import SearchResult from './component/SearchResult/SearchResult'
 import {Redirect} from  'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -26,7 +27,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div>
-        <Navbar />
+        <Header />
         <Switch>
           {/* <Redirect from='' to='/' /> */}
           <Route exact path="/">

@@ -1,67 +1,57 @@
-.detail-container{
-    height: 100vh;
-    background-color: burlywood;
-    width: 80%;
-    min-height: 126vh;
-
+.detail-container {
+  height: 100vh;
+  width: 100%;
+  min-height: 126vh;
 }
-.detailComponent{
-    display: flex;
+
+.detailComponent {
+  display: flex;
   height: 100%;
 }
-.main{
-    position: absolute;
-    top: 0;
-    right: 30%;
-    width: 25rem;
-    height: 10rem;
+.main {
+  position: absolute;
+  top: 0;
+  right: 30%;
+  width: 30rem;
+  height: 10rem;
 }
 
-.detail{
-   
+.detail {
   padding: 10px;
-    font-size: 1.2rem;
-    color: white;
-    font-family: monospace;
-    background:rgba(6, 41, 41, 0.185);
-    border-radius: 1%;
-
+  font-size: 1rem;
+  font-family: monospace;
+  background-color: rgb(36, 57, 63);
+  
 }
-.title{
-    color:wheat;
+.title {
+  color: white;
 }
-.info{
-    position: relative;
-    height: 65%;
-    background-color: rgba(14, 0, 26, 0);
-    margin: auto;
-    border-radius: 2%;
+.info {
+  position: relative;
+  height: 65%;
+  margin: auto;
 }
 
-.subtitle{
-    font-size: 1.2rem;
-    
-    
+.subtitle {
+  font-size: 1.2rem;
 }
-.player{
-    position: absolute;
-    width: 12rem;
-    height: 15rem;
-    background-color: blueviolet;
-    top: 0;
-    right: 0;
+.player {
+  position: absolute;
+  width: 12rem;
+  height: 15rem;
+  background-color: blueviolet;
+  top: 0;
+  right: 0;
 }
 @media only screen and (max-width: 600px) {
+  .info {
+    position: relative;
 
-    .info{
-        position: relative;
-        
-        width: 59%;
-        height: 75%;
-        background-color: rgba(29, 21, 36, 0.247);
-        margin: auto;
-        border-radius: 2%;
-        margin-top: 2.5rem;
-    }
-
+    width: 59%;
+    height: 75%;
+    background-color: rgba(29, 21, 36, 0.247);
+    margin: auto;
+    border-radius: 2%;
+    margin-top: 2.5rem;
+  }
 }

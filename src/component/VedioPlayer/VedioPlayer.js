@@ -10,10 +10,9 @@ const VedioPlayer = ({ vedio,actor }) => {
   }
 
   const opts = {
-    height: "600",
-    width: "1010.4",
+    height: "625",
+    width: "1114.4",
     playerVars: {
-      // https://developers.google.com/youtube/player_parameters
       autoplay: 0,
     },
   };

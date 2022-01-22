@@ -37,9 +37,7 @@ class MovieList extends React.Component {
       index0flastpage
     );
 
-    //  this.state.data = (num) => {
-    //   this.setState({ curentPage: num });
-    // };
+  
 
     const paginate = (num) => {
       this.setState({ curentPage: num });
@@ -48,25 +46,16 @@ class MovieList extends React.Component {
     return (
       <div>
        
-        <div className="movie-link">
-          <Link  className="link" to={"/latest/"}>
-          <div  >Latest Movie</div>
-          </Link>
-          <Link className="link"   to={"/toprating/"}>
-          <div >Top Rating</div>
-          </Link>
-        </div>
+      
         
         <div className="movieContainer">
           {isloading && <h1>please wait isLoading...</h1>}
-          {/* <Latestmovie data={this.state.latestMovie}/> */}
 
           <Card
-            data={currentpost}
-           
-            isloading={this.state.isLoading}
-           
+            data={currentpost}    
+            isloading={this.state.isLoading}     
           />
+
         </div>
         <Pagination
           postperpage={this.state.postperPage}

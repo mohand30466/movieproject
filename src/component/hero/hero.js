@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 
-
 class Hero extends React.Component {
   state = {
     data: [],
@@ -39,59 +38,37 @@ class Hero extends React.Component {
 
     const startPoint = Math.floor(Math.random(1) * 15);
     const cards = this.state.data.slice(startPoint, startPoint + 4);
-    // console.log(cards);
+   
+    const url = "https://image.tmdb.org/t/p/w300/";
 
     return (
       <div className="heroContainer">
+        <h3 style={{paddingTop:"30px" , color:"white"}}>Welcome To Movie DB Enjoy Your Fouvorite Movie</h3>
         <div className="hero-line">
           <Slider {...setting}>
             {cards.map((el) => {
               const id = el.id;
-
-              return (
-                <div className="Link">
-                  <Link to={"/movie/" + id}>
-                    <div
-                      className="cards"
-                      // style={{
-                      //   backgroundImage: `url(https://image.tmdb.org/t/p/w200/${el.poster_path})`,
-                      //   backgroundSize: "cover",
-                      //   backgroundPosition: "center",
-                      // }}
-                      key={el.id}
-                    >
-                        <img
-                              style={{  width: "55rem",
-                                height: "29rem" }}
-                              src={`https://image.tmdb.org/t/p/w200/${el.poster_path}`}
-                            />
-
-                      <div className="details">
-                        <div>{el.title}</div>
-                        <div>{el.overview}</div>
-                        <div className="ratings">
-                          <div>
-                            <img
-                              style={{ width: "20px", height: "20px" }}
-                              src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/13575076871557740374-64.png"
-                            />
-                          </div>
-                          <div>{el.vote_average}</div>
-                          <div className="years">
-                            {el.release_date.slice(0, 4)}
-                          </div>
-                          <div className="btn">
-                            <Link to={"/movie/" + id}>
-                              {" "}
-                              <button>Detail</button>
-                            </Link>
-                          </div>
-                        </div>
+              if (el.poster_path) {
+                return (
+                  <div className="Link">
+                    <Link to={"/movie/" + id}>
+                      <div className="cards" key={el.id}>
+                        <div
+                          style={{
+                            width: "47rem",
+                            height: "25rem",
+                            backgroundImage: `url(${url}${el.poster_path})`,
+                            backgroundSize: "47rem 25rem",
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "fixed",
+                            borderRadius:"3px"
+                          }}
+                        ></div>
                       </div>
-                    </div>
-                  </Link>
-                </div>
-              );
+                    </Link>
+                  </div>
+                );
+              }
             })}
           </Slider>
           <Redirect
@@ -99,11 +76,6 @@ class Hero extends React.Component {
               pathname: "/",
             }}
           />
-           {/* <div>
-            <h1>Welcome to Movie App</h1>
-            <p>find your movie and enjoy it</p>
-          </div>  */}
-         
         </div>
       </div>
     );
