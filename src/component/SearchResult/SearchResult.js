@@ -30,31 +30,34 @@ class Latestmovie extends React.Component {
               if(movie.poster_path){
               return (
                 <Link className="searchMovieLink" to={`/movie/${movie.id}`}> 
+
                 <div className="movdata" key={movie.id}>
                   <div
                     className="bgMovie"
                     style={{
                       backgroundImage: `url(${url}${movie.poster_path})`,
                       backgroundSize: "cover",
+                      backgroundPosition:"center",
+                      backgroundSize:"100% 100%"
                     }}
                     key={movie.id}
                   ></div>
+
                   <div className="info">
-                    <div className="movieTitle"> {movie.title}</div>
-                    <div style={{ fontSize: "13px", color: "white" }}>
+                    <div className="movieTitle"> {movie.title.slice(0,15)}</div>
+                    <div className="overview" style={{  color: "white" }}>
                       {" "}
                       {`${movie.overview.slice(0, 45)}   ...`}
                     </div>
                     <div className="yearAndRateContainer">
                       <div>{movie.release_date.slice(0, 4)}</div>
+                      <div>{`|| ${movie.original_language} ||`}</div>
+                      
                       <div>
                         
                         <FontAwesomeIcon
-                          style={{
-                            width: "20px",
-                            height: "20px",
-                            color: "yellow",
-                          }}
+                        className="rate"
+                          
                           icon={faStar}
                         />
                         <span>{movie.vote_average}</span>

@@ -52,15 +52,17 @@ class Hero extends React.Component {
                 return (
                   <div className="Link">
                     <Link to={"/movie/" + id}>
-                      <div className="cards" key={el.id}>
-                        <div
+                      <div className="cards"
+                       key={el.id}>
+                        <div className="heroBackground"
                           style={{
-                            width: "47rem",
-                            height: "25rem",
+                           
                             backgroundImage: `url(${url}${el.poster_path})`,
-                            backgroundSize: "47rem 25rem",
+                            width: "75",
+                            height: "100%",
+                            backgroundSize: "75vw 70vh",
                             backgroundRepeat: "no-repeat",
-                            backgroundPosition: "fixed",
+                            backgroundPosition: "center",
                             borderRadius:"3px"
                           }}
                         ></div>

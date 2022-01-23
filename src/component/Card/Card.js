@@ -32,9 +32,10 @@ const Card = ({ data }) => {
                    
                   
                   </div>
-                  <div style={{color:"white", fontSize:"17px", textAlign:"center"}} >{movie.title.slice(0,30)}</div>
+                  <div style={{color:"white", fontSize:"17px", textAlign:"center"}} >{movie.title.slice(0,15)}</div>
                   <div className="movieinfo">
                    <div >{movie.release_date.slice(0, 4)}</div>
+                   <div>{`|| ${movie.original_language} ||`}</div>
                     <div >
                       <FontAwesomeIcon icon={faStar} />
                       <span>{movie.vote_average}</span>
