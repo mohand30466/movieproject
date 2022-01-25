@@ -18,7 +18,7 @@ const Actor = ({ data }) => {
         return (
           <div className="act">
             <img src={ur + el.profile_path} />
-            <h4>{el.name.slice(0, 10)}</h4>
+            <p>{el.name.slice(0, 10)}</p>
           </div>
         )}
       })}

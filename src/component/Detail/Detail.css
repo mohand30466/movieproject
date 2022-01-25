@@ -11,8 +11,8 @@
 .main {
   position: absolute;
   top: 0;
-  right: 30%;
-  width: 30rem;
+  right: 33%;
+  width: 40vw;
   height: 10rem;
 }
 
@@ -32,7 +32,7 @@
   margin: auto;
 }
 
-.subtitle {
+.writer {
   font-size: 1.2rem;
 }
 .player {
@@ -46,12 +46,28 @@
 @media only screen and (max-width: 600px) {
   .info {
     position: relative;
-
-    width: 59%;
-    height: 75%;
+    width: 100vw;
+    height: 40rem;
     background-color: rgba(29, 21, 36, 0.247);
     margin: auto;
     border-radius: 2%;
     margin-top: 2.5rem;
+  }
+  .main {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 10rem;
+  }
+  .detail {
+    padding: 10px;
+    font-size: 10px;
+    font-family: monospace;
+    background-color: rgb(36, 57, 63);
+    
+  }
+  .writer {
+    font-size: 10px;
   }
 }

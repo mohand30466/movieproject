@@ -1,9 +1,8 @@
-.searchBtn{
-    border: 3px solid thistle;
-    border-radius: 3px;
-    background-color: thistle;
-    color: gray;
-    font-family:'Times New Roman', Times, serif;
-    margin-left: 10px;
-
+.searchBtn {
+  border: 3px solid thistle;
+  border-radius: 3px;
+  background-color: thistle;
+  color: gray;
+  font-family: "Times New Roman", Times, serif;
+  margin-left: 10px;
 }

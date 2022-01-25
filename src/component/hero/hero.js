@@ -55,14 +55,15 @@ class Hero extends React.Component {
                       <div className="cards"
                        key={el.id}>
                         <div className="heroBackground"
-                          style={{
-                           
+                          style={{  
                             backgroundImage: `url(${url}${el.poster_path})`,
-                            width: "75",
-                            height: "100%",
-                            backgroundSize: "75vw 70vh",
+                            width: "75vw",
+                            height: "70vh",
+                            backgroundSize: "60vw 71vh",
+                            
                             backgroundRepeat: "no-repeat",
                             backgroundPosition: "center",
+                            backgroundPosition:"fixed",
                             borderRadius:"3px"
                           }}
                         ></div>

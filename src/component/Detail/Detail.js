@@ -87,8 +87,8 @@ console.log(tmdbid);
 
                     <div className="detail title">
                       {" "}
-                      <span className="subtitle">Writer/s:</span>
-                      {this.state.movieDetail.writer}
+                      <span className="writer">Writer/s:</span>
+                      {this.state.movieDetail.writer&&this.state.movieDetail.writer.slice(0,30)}
                     </div>
                   </div>
                 </div>
